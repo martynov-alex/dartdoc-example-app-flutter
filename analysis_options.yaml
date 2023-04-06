@@ -1,0 +1,22 @@
+include: package:surf_lint_rules/analysis_options.yaml
+
+linter:
+  rules:
+    public_member_api_docs: true
+    prefer_constructors_over_static_methods: false
+    always_put_required_named_parameters_first: false
+    avoid_positional_boolean_parameters: false
+    prefer_mixin: false
+    one_member_abstracts: false
+
+dart_code_metrics:
+  rules:
+        - prefer-match-file-name: false
+
+analyzer:
+  exclude:
+    - "**.freezed.dart"
+    - lib/**/*.g.dart
+    - lib/**/*.gr.dart
+    - lib/**/*.freezed.dart
+    - doc

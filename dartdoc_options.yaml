@@ -1,0 +1,17 @@
+dartdoc:
+  categories:
+    'API':
+      markdown: doc/topics/api.md
+    'Repository':
+      markdown: doc/topics/repositories.md
+    'Entity':
+      markdown: doc/topics/entities.md
+    'Фича':
+      markdown: doc/topics/фича.md
+      name: Feature
+  categoryOrder: ['API', 'Repository', 'Entity', "Фича"]
+  favicon: doc/assets/surf.ico
+  footerText: ['doc/header_footer/footer.html']
+  showUndocumentedCategories: true
+  exclude: ['unnecessary', 'flutter']
+  nodoc: ['lib/feature/presentation/widgets/*.dart']
