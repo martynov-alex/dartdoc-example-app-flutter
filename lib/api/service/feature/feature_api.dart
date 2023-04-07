@@ -1,4 +1,6 @@
-import 'package:dartdoc_example_flutter/api/data/feature_data_dto.dart';
+library feature_api;
+
+import 'package:dartdoc_example_flutter/api/service/feature/data/feature_data_dto.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 

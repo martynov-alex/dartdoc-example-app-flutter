@@ -8,10 +8,12 @@ dartdoc:
       markdown: doc/topics/entities.md
     'Фича':
       markdown: doc/topics/фича.md
-      name: Feature
   categoryOrder: ['API', 'Repository', 'Entity', "Фича"]
-  favicon: doc/assets/surf.ico
-  footerText: ['doc/header_footer/footer.html']
   showUndocumentedCategories: true
-  exclude: ['unnecessary', 'flutter']
+  include: ['feature_with_api']
+  exclude: ['unnecessary']
   nodoc: ['lib/feature/presentation/widgets/*.dart']
+  footerText: [ 'doc/header_footer/footer.html' ]
+  favicon: doc/assets/surf.ico
+  ignore:
+    - unresolved-doc-reference

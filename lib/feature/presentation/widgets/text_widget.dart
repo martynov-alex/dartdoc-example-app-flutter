@@ -7,6 +7,11 @@ class TextWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text('Виджет с текстом');
+    return const Text(
+      'Work to surf, surf to work!',
+      style: TextStyle(
+        fontSize: 20,
+      ),
+    );
   }
 }

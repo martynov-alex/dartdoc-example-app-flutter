@@ -1,9 +1,9 @@
-import 'package:dartdoc_example_flutter/api/service/feature_api.dart';
+import 'package:dartdoc_example_flutter/api/service/feature/feature_api.dart';
 import 'package:dartdoc_example_flutter/feature/data/repositories/feature_repository.dart';
 import 'package:dartdoc_example_flutter/feature/domain/repositories/i_feature_repository.dart';
 import 'package:dio/dio.dart';
 
-/// Скоуп фичи.
+/// DI скоуп фичи.
 /// {@category Фича}
 abstract class IFeatureScope {
   /// {@macro feature_repository}

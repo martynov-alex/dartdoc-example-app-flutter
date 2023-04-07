@@ -1,4 +1,4 @@
-import 'package:dartdoc_example_flutter/api/data/feature_data_dto.dart';
+import 'package:dartdoc_example_flutter/api/service/feature/data/feature_data_dto.dart';
 import 'package:dartdoc_example_flutter/feature/domain/entities/feature_data_entity.dart';
 
 /// Маппер сущности [FeatureDataEntity].

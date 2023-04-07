@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:dartdoc_example_flutter/api/service/feature_api.dart';
+import 'package:dartdoc_example_flutter/api/service/feature/feature_api.dart';
 import 'package:dartdoc_example_flutter/feature/domain/entities/feature_data_entity.dart';
 import 'package:dartdoc_example_flutter/feature/domain/repositories/i_feature_repository.dart';
 
@@ -15,7 +15,7 @@ const _dataTypes = DataTypeEntity.values;
 class FeatureRepository implements IFeatureRepository {
   final FeatureApi _featureApi;
 
-  /// @nodoc.
+  /// Конструктор.
   const FeatureRepository({
     required FeatureApi featureApi,
   }) : _featureApi = featureApi;

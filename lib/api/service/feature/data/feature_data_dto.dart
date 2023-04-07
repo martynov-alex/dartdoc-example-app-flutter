@@ -1,3 +1,5 @@
+library feature_data_dto;
+
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'feature_data_dto.g.dart';

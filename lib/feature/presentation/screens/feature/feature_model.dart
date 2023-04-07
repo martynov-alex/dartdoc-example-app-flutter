@@ -22,8 +22,5 @@ class FeatureModel extends ElementaryModel implements IFeatureModel {
       : _featureRepository = featureRepository;
 
   @override
-  Future<FeatureDataEntity> get() async {
-    final data = await _featureRepository.get();
-    return data;
-  }
+  Future<FeatureDataEntity> get() async => _featureRepository.get();
 }

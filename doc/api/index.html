@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="generator" content="made with love by dartdoc 6.1.5">
+  <meta name="description" content="dartdoc_example_flutter API docs, for the Dart programming language.">
+  <title>dartdoc_example_flutter - Dart API docs</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li class="self-crumb">dartdoc_example_flutter package</li>
+  </ol>
+  <div class="self-name">dartdoc_example_flutter</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      
+<section class="desc markdown">
+  <h1 id="--dartdoc--flutter-">Пример использования dartdoc для Flutter приложения</h1>
+<h2 id="--">Правильное документирование кода</h2>
+<p>Прежде всего, для того чтобы получить хорошую документацию, нужно правильно комментировать код.</p>
+<p>Как оставлять комментарии в коде можно почитать <a href="https://dart.dev/language/comments">тут</a>.
+Рекомендации по документированию описаны в статье <a href="https://dart.dev/guides/language/effective-dart/documentation">Effective Dart: Documentation</a>.</p>
+<p>Не буду описывать все рекомендации, но остановлюсь на первой.</p>
+<blockquote>
+<p>DO format comments like sentences.</p>
+</blockquote>
+<p>Благодаря тому, что комментарий выглядит как предложение (с точками в конце 😎), мы получаем документацию в едином стиле:</p><object data="assets/comments_1.png" width="300">
+<img src="doc/api/assets/comments_1.png" width="300">
+</object>
+<h2 id="------">Дополнительные возможности документирования через теги в комментариях</h2>
+<p>Помимо простого текста в комментариях можно использовать теги, которые будут определенным образом интерпретированы при генерации документации.
+Рассмотрим основные.</p>
+<h4 id="category">@category</h4>
+<p>Этот тэг позволяет отнести элемент кода (класс, метод, переменную) к какой-либо категории. На странице документации категории отображаются в виде списка в разделе TOPICS:</p><object data="assets/tags_1.png" width="300">
+<img src="doc/api/assets/tags_1.png" width="300">
+</object>
+<p>При нажатии на ссылку открывается страница категории и список всех элементов, которые помечены этой категорией:</p><object data="assets/tags_2.png" width="300">
+<img src="doc/api/assets/tags_2.png" width="300">
+</object>
+<p>Также, как видно, элементы помечаются ярлыком указанной для них категории. При клике на ярлык опять же открывается страница категории.</p>
+<p>Можно добавлять несколько категорий:</p>
+<pre class="language-dart"><code class="language-dart">/// {@category API}  
+/// {@category Фича}  
+@RestApi()  
+abstract class FeatureApi {
+...
+</code></pre>
+<p>Также существует тег <code>@subCategory</code>, но пока он бесполезен, есть предложение использовать его для организации структуры в разделе TOPICS, но пока не реализовано (<a href="https://github.com/dart-lang/dartdoc/issues/2954">ссылка на issue</a>).</p>
+<h4 id="template-endtemplate--macro">@template, @endtemplate и @macro</h4>
+<p>Эти теги позволяют прописать комментарий один раз и далее в коде использовать ссылку на него.</p>
+<p>Проще разобрать синтаксис на примере.
+У нас есть сущность <code>FeatureDataEntity</code>, которая содержит другую сущность <code>DataTypeEntity</code>. В этом случае можно воспользоваться шаблоном:</p>
+<pre class="language-dart"><code class="language-dart">/// Сущность данных по фиче.  
+/// {@category Entity}  
+/// {@category Фича}  
+@freezed  
+class FeatureDataEntity with _$FeatureDataEntity {  
+  /// @nodoc.  
+  const factory FeatureDataEntity({  
+    /// Данные.  
+    required String data,  
+  
+    /// {@macro data_type_entity}  &lt;---- используем шаблон
+    required DataTypeEntity dataType,  
+  }) = _FeatureDataEntity;  
+}  
+  
+/// {@template data_type_entity}  
+/// Сущность типа данных.  
+/// {@endtemplate}  
+/// {@category Сущности}  
+enum DataTypeEntity {  
+  /// Заголовок.  
+  title('Заголовок'),
+</code></pre>
+<p>Также полезно для репозиториев, например.
+В самом репозитории пишем:</p>
+<pre class="language-dart"><code class="language-dart">/// {@template feature_repository}  
+/// Репозиторий фичи.  
+/// {@endtemplate}  
+/// {@category Repository}  
+/// {@category Фича}  
+class FeatureRepository implements IFeatureRepository {
+...
+</code></pre>
+<p>А в описании зависимостей ссылаемся на шаблон:</p>
+<pre class="language-dart"><code class="language-dart">/// DI скоуп фичи.  
+/// {@category Фича}  
+abstract class IFeatureScope {  
+  /// {@macro feature_repository}  
+  IFeatureRepository get featureRepository;  
+  
+  /// {@macro scope_dispose}  
+  void dispose();  
+}
+...
+</code></pre>
+<h4 id="image--animation">@image и @animation</h4>
+<p>Эти теги позволяют добавлять в документацию картинки и видео.
+Но есть проблемы:</p>
+<ul>
+<li>я не смог добиться отображения картинок через <code>@image</code> ,</li>
+<li>видео через <code>@animation</code> отображается, но надо точно указывать размеры, если хотите масштабировать, нельзя задать просто ширину, например.</li>
+</ul>
+<p>Я пришел к выводу, что проще всего использовать HTML теги для этого.</p>
+<h2 id="-html--">Использование HTML в комментариях</h2>
+<p>HTML код можно добавить в комментарии "как есть". Я добавил локальную картинку и  видео, а также видео с Youtube:</p>
+<pre class="language-dart"><code class="language-dart">/// Экран фичи.  
+///  
+/// Можно вставить HTML код, например, картинку:  
+/// &lt;br&gt;&lt;image width='200' src='/assets/feature_screen.png'&gt;  
+/// &lt;br&gt;&lt;p&gt;Или добавить скринкаст:&lt;/p&gt;  
+/// &lt;video width="200" controls autoplay&gt;&lt;source src='/assets/feature_screencast.mov' type="video/mp4"&gt;&lt;/video&gt;  
+/// &lt;br&gt;&lt;p&gt;Или видео с Youtube:&lt;/p&gt;  
+/// &lt;iframe width="480" height="270" src="https://www.youtube.com/embed/YYb3KBXa624"/&gt;  
+/// {@category Фича}  
+/// {@category Elementary}  
+class FeatureScreen extends ElementaryWidget&lt;IFeatureWm&gt; {
+...
+</code></pre>
+<p>Получится так:</p><object data="assets/html_1.png" width="600">
+<img src="doc/api/assets/html_1.png" width="600">
+</object>
+<p>Чтоб локальные ресурсы отобразились, они должны находится внутри папки со сгенерированной документацией. При этом нужно указывать относительный этой папки путь.</p>
+<h2 id="---2">Запуск генерации документации</h2>
+<p>Прежде всего нужно вызвать <code>pub get</code> и убедиться, что анализатор не находит ошибок.</p>
+<p>Далее возможны два способа запустить генерацию документации:</p>
+<ul>
+<li>с помощью команды <code>dart doc</code></li>
+<li>через вызов полнофункциональной утилиты <code>dartdoc</code></li>
+</ul>
+<p>Для первого способа ничего делать дополнительно нужно, достаточно запустить:</p>
+<pre class="language-shell"><code class="language-shell">$ dart doc
+</code></pre>
+<p>Если мы хотим использовать утилиту <code>dartdoc</code>, то нужно ее сначала активировать:</p>
+<pre class="language-shell"><code class="language-shell">$ flutter pub global activate dartdoc
+</code></pre>
+<p>Теперь можно генерировать документацию так:</p>
+<pre class="language-shell"><code class="language-shell">$ flutter pub global run dartdoc
+</code></pre>
+<h2 id="-----dart-doc">Настройки для генерации документации через <code>dart doc</code></h2>
+<p>Настройки генерации документации через команду <code>dart doc</code> ограничены  специальным файлом с настройками <code>dartdoc_options.yaml</code>, который нужно положить в корневую директорию проекта.</p>
+<p>Также <code>dart doc</code> имеет несколько ключей для запуска:</p>
+<pre class="language-shell"><code class="language-shell">$ dart doc --help
+
+Generate API documentation for Dart projects.
+
+For additional documentation generation options, see the 'dartdoc_options.yaml' file documentation at https://dart.dev/go/dartdoc-options-file.
+
+Usage: dart doc [arguments] [&lt;directory&gt;]
+-h, --help                  Print this usage information.
+-o, --output=&lt;directory&gt;    Configure the output directory.
+                            (defaults to "doc/api")
+    --validate-links        Display warnings for broken links.
+    --dry-run               Try to generate the docs without saving them.
+
+</code></pre>
+<p>Судя по документации, есть возможность сгенерировать документацию для отельной директории, но у меня это не удалось сделать.</p>
+<p>Получал такой результат:</p>
+<pre class="language-shell"><code class="language-shell">dart doc lib/core              
+Documenting dartdoc_example_flutter...                                                                                                                                       Initialized dartdoc with 20 libraries
+no issues found
+Documented 0 public libraries in 6.6 seconds
+dartdoc could not find any libraries to document
+Success! Docs generated into /.../dartdoc_example_flutter/doc/api
+</code></pre>
+<p>Не смог понять в чем причина и что я делаю не так 🤷🏻‍♂️
+Но, не думаю, что это нужный кейс.</p>
+<h3 id="-dartdoc_optionsyaml">Настройки <code>dartdoc_options.yaml</code></h3>
+<p>Список основных настроек описан <a href="https://pub.dev/packages/dartdoc#dartdoc_optionsyaml">тут</a>.</p>
+<p>Остановлюсь на тех, в которых мне удалось разобраться и показались полезными.</p>
+<p>Разберем файл настроек из нашего примера:</p>
+<pre class="language-yaml"><code class="language-yaml">dartdoc:  
+  categories:  
+    'API':  
+      markdown: doc/topics/api.md  
+    'Repository':  
+      markdown: doc/topics/repositories.md   
+    'Entity':  
+      markdown: doc/topics/entities.md  
+    'Фича':  
+      markdown: doc/topics/фича.md  
+  categoryOrder: ['API', 'Repository', 'Entity', "Фича"]
+  showUndocumentedCategories: true
+  include: ['feature_with_api']
+  exclude: ['unnecessary']  
+  nodoc: ['lib/feature/presentation/widgets/*.dart']  
+  footerText: ['doc/header_footer/footer.html']  
+  favicon: doc/assets/surf.ico 
+  ignore:
+    - unresolved-doc-reference
+</code></pre>
+<h4 id="categories-categoryorder--showundocumentedcategories"><code>categories</code>, <code>categoryOrder</code> и <code>showUndocumentedCategories</code></h4>
+<blockquote>
+<p><strong>categories</strong>: More details for each category/topic. For topics you'd like to document, specify the markdown file with&nbsp;<code>markdown:</code>&nbsp;to use for the category page. Optionally, rename the category from the source code into a display name with&nbsp;<code>name:</code>. If there is no matching category defined in dartdoc_options.yaml, those declared categories in the source code will be invisible
+<strong>categoryOrder</strong>: Specify the order of topics for display in the sidebar and the package page
+<strong>showUndocumentedCategories</strong>: Label categories that aren't documented</p>
+</blockquote>
+<p><code>categories</code> – это список категорий, которые имеют свою markdown страницу (обязательно должна быть указана) и отображаются в меню слева в разделе TOPICS.</p>
+<p>Порядок отображения определяется списком в <code>categoryOrder</code>.</p>
+<p>Если категория не находится в списке <code>categories</code>, то она не отображается в списке категорий, но может отображаться в виде некликабельного ярлыка, если указана настройка <code>showUndocumentedCategories: true</code>. В нашем примере это категория  <code>Elementary</code>, которую мы добавили для всех классов наследников этой библиотеки:</p><object data="assets/options_1.png" width="340">
+<img src="doc/api/assets/options_1.png" width="340">
+</object>
+<h4 id="include"><code>include</code></h4>
+<blockquote>
+<p><strong>include</strong>: Specify a list of library names to generate docs for, ignoring all others. All libraries listed must be local to this package (unlike the command line&nbsp;<code>--include</code>)</p>
+</blockquote>
+<p>Этот параметр позволяет включить в документацию только выбранные библиотеки.</p>
+<p>Тут важно еще отметить, что по-умолчанию <em>все</em> dart файлы проекта попадают в список библиотек слева:</p><object data="assets/options_2.png" width="200">
+<img src="doc/api/assets/options_2.png" width="200">
+</object>
+<p>Т.е. если проект большой, то там находится просто один огромный список всех файлов, которые отсортированы по алфавиту.</p>
+<p>При этом хоть файлы и находятся в списке библиотек, если выделить нужные и включить их в <code>include</code>, например:</p>
+<pre class="language-yaml"><code class="language-yaml">include: ['feature_api', 'feature_data_dto']
+</code></pre>
+<p>И начать генерацию документации, то получим ошибку:</p>
+<pre class="language-dart"><code>failed: Did not find: [feature_api, feature_data_dto] in known libraries: []
+</code></pre>
+<p>Т.е. хоть файлы и находятся в списке библиотек, получить документацию по отдельным нельзя. По крайней мере мне не удалось.</p>
+<p>Библиотеками, которые можно включить в <code>include</code> являются только файлы  помеченные как <code>library</code>.  Т.е. если мы в feature_api.dart и feature_data_dto.dart добавим в начало соотвественно <code>library feature_api;</code> и <code>library feature_data_dto;</code>, то сможем получить документацию только по ним:</p><object data="assets/options_3.png" width="500">
+<img src="doc/api/assets/options_3.png" width="500">
+</object>
+<p>Также мы можем с использованием ключевого слова <code>export</code> добавить в библиотеку нужные файлы:</p>
+<pre class="language-dart"><code class="language-dart">/// Все файлы по Фиче включая API.  
+library feature_with_api;  
+  
+export 'api/service/feature_service.dart';  
+export 'feature/feature.dart';
+</code></pre>
+<p>При этом feature.dart выглядит так:</p>
+<pre class="language-dart"><code class="language-dart">export 'data/mappers/feature_entity_mapper.dart';  
+export 'data/repositories/feature_repository.dart';  
+export 'di/feature_scope.dart';  
+export 'domain/entities/feature_data_entity.dart';  
+export 'domain/repositories/i_feature_repository.dart';  
+export 'presentation/screens/feature_screen.dart';
+</code></pre>
+<p>А feature_screen.dart так:</p>
+<pre class="language-dart"><code class="language-dart">export 'feature/feature_model.dart';  
+export 'feature/feature_screen.dart';  
+export 'feature/feature_wm.dart';  
+export 'feature_root_screen.dart';
+</code></pre>
+<p>Таким образом мы модульно собираем нужную нам библиотеку из нужных нам файлов.</p>
+<p>В итоге если включить в <code>include</code> только <code>feature_with_api</code> и сгенерировать документацию, то мы получим следующее:</p><object data="assets/options_4.png" width="600">
+<img src="doc/api/assets/options_4.png" width="600">
+</object>
+<p>При этом, возможно, при генерации встретить предупреждение:</p>
+<pre class="language-dart"><code>warning: no canonical library found for feature_data_dto.FeatureDataDto, not linking from feature_data_dto.FeatureDataDto: 
+</code></pre>
+<p>Это означает что в цепочки экспортов не попали какие-то файлы, на которые есть ссылки. Документация соберется, но ссылки будут не кликабельны.</p>
+<p>Подробнее про <code>library</code> можно почитать в статье <a href="https://dart.dev/language/libraries">Libraries &amp; imports</a>.</p>
+<h4 id="exclude--nodoc"><code>exclude</code> и <code>nodoc</code></h4>
+<blockquote>
+<p><strong>exclude</strong>: Specify a list of library names to avoid generating docs for, overriding any specified in include. All libraries listed must be local to this package, unlike the command line&nbsp;<code>--exclude</code>. See also&nbsp;<code>nodoc</code>
+<strong>nodoc</strong>: Specify files (via globs) which should be treated as though they have the&nbsp;<code>@nodoc</code>&nbsp;tag in the documentation comment of every defined element. Unlike&nbsp;<code>exclude</code>&nbsp;this can specify source files directly, and neither inheritance nor reexports will cause these elements to be documented when included in other libraries. For more fine-grained control, use&nbsp;<code>@nodoc</code>&nbsp;in element documentation comments directly, or the&nbsp;<code>exclude</code>&nbsp;directive</p>
+</blockquote>
+<p>Эти параметры можно использовать для исключения части кода из документации.</p>
+<p>Прежде всего надо сказать о теге <code>@nodoc</code> , который можно указать перед любым элементом кода и он будет исключен из документации.</p>
+<p>Например, по стандартным правилам <a href="https://pub.dev/packages/surf_lint_rules"><code>surf_lint_rules</code></a>, который мы используем, все публичные элементы должны быть задокументированы. Это же, например, касается и дефолтного конструктора виджета, в чем нет большого смысла. В таком случае можно воспользоваться тегом и исключить этот элемент из документации:</p>
+<pre class="language-dart"><code class="language-dart">/// @nodoc.  
+const IconWidget({super.key});
+</code></pre>
+<p>Настройка <code>nodoc</code> позволяет указать конкретные файлы, где все элементы кода будут рассматриваться как помеченные исключающими тегами и не попадут в документацию.
+При этом надо указывать пути до файлов. В нашем примере мы исключили все вспомогательные виджеты по фиче:</p>
+<pre class="language-yaml"><code class="language-yaml">nodoc: ['lib/feature/presentation/widgets/*.dart']
+</code></pre>
+<p>Параметр <code>exclude</code> позволяет указать список библиотек, которые нужно убрать из документации. При этом в отличии от <code>nodoc</code> они все равно могут попасть в документацию, если будут экспортироваться в составе других библиотек.</p>
+<p>В нашем примере мы исключили файл unnecessary.dart, указав:</p>
+<pre class="language-yaml"><code class="language-yaml">exclude: ['unnecessary']
+</code></pre>
+<p>Да, в отличии от <code>include</code> это сработало и <code>library</code> уже не обязательно.</p>
+<h4 id="header-footer-footertext">header, footer, footerText</h4>
+<blockquote>
+<p><strong>header</strong>: A list of paths to header files containing HTML text
+<strong>footer</strong>: A list of paths to footer files containing HTML text
+<strong>footerText</strong>: A list of paths to text files for optional text next to the package name and version</p>
+</blockquote>
+<p>Эти настройки позволяют добавить HTML файлы со своим контентом в состав <code>header</code> и <code>footer</code> блоков страницы документации.</p>
+<p>Добавим в <code>footer</code> дополнительную подпись:</p>
+<pre class="language-yaml"><code class="language-yaml">footerText: ['doc/header_footer/footer.html']  
+</code></pre>
+<p>Будет так:</p><object data="assets/options_5.png" width="400">
+<img src="doc/api/assets/options_5.png" width="400">
+</object>
+<h4 id="favicon">favicon</h4>
+<blockquote>
+<p><strong>favicon</strong>: A path to a favicon for the generated docs</p>
+</blockquote>
+<p>Тут все просто. Можно поменять favicon для страниц документации при просмотре в браузере. Если мы отдаем документацию заказчику, то любая мелочь важна.</p>
+<p>В нашем случае:</p>
+<pre class="language-yaml"><code class="language-yaml">favicon: doc/assets/surf.ico
+</code></pre>
+<h4 id="ignore">ignore</h4>
+<blockquote>
+<p><strong>ignore</strong>: Specify warnings to be completely ignored. See the lists of valid warnings in the command line help for&nbsp;<code>--errors</code>,&nbsp;<code>--warnings</code>, and&nbsp;<code>--ignore</code>.</p>
+</blockquote>
+<p>Можно указать список ошибок или предупреждений, которые будут игнорироваться при генерации. Возможные ошибки и предупреждения описаны в справке:</p>
+<pre class="language-shell"><code class="language-shell">$ flutter pub global run dartdoc --help
+</code></pre>
+<h2 id="-----dartdoc">Настройки для генерации документации через <code>dartdoc</code></h2>
+<p>При генерации документации через вызов утилиты <code>flutter pub global run dartdoc</code> также используются настройки из dartdoc_options.yaml, которые можно дополнить или переопределить дополнительными параметрами.</p>
+<p>Список параметров можно получить в справке:</p>
+<pre class="language-shell"><code class="language-shell">$ flutter pub global run dartdoc --help
+</code></pre>
+<h2 id="-">Просмотр документации</h2>
+<p>В итоге документация имеет примерно такую структуру:</p>
+<pre class="language-dart"><code>index.html                          
+index.json                          # Индекс для поиска
+categories.json                     # Настройки категорий для классов
+library-name/                       
+  ClassName-class.html              # "homepage" для класса
+  ClassName/
+    ClassName.html                  # constructor
+    ClassName.namedConstructor.html # named constructor
+    method.html
+    property.html
+  CONSTANT.html
+  property.html
+  top-level-function.html
+</code></pre>
+<p>Документацию можно просмотреть в браузере, но для работы поиска нужно запустить HTTP сервер:</p>
+<pre class="language-shell"><code class="language-shell">$ dart pub global activate dhttpd
+$ dhttpd --path doc/api
+</code></pre>
+<p>Далее надо перейти на <code>http://localhost:8080</code> для просмотра.</p>
+<p>Также можно сгенерировать документацию в markdown.</p>
+</section>
+
+
+      <section class="summary">
+          <h2>Libraries</h2>
+        <dl>
+          <dt id="feature_with_api">
+  <span class="name"><a href="feature_with_api/feature_with_api-library.html">feature_with_api</a></span> 
+
+</dt>
+<dd>Все файлы по Фиче включая API.
+</dd>
+
+        </dl>
+      </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li class="self-crumb">dartdoc_example_flutter package</li>
+</ol>
+
+
+    <h5 class="hidden-xs"><span class="package-name">dartdoc_example_flutter</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Topics</li>
+        <li><a href="topics/API-topic.html">API</a></li>
+        <li><a href="topics/Repository-topic.html">Repository</a></li>
+        <li><a href="topics/Entity-topic.html">Entity</a></li>
+        <li><a href="topics/Фича-topic.html">Фича</a></li>
+      <li class="section-title">Libraries</li>
+      <li><a href="feature_with_api/feature_with_api-library.html">feature_with_api</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div>
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dartdoc_example_flutter
+      1.0.0+1
+  </span>
+
+  <center>Тут можно разместить кастомный текст или <a href="https://surf.ru/">ссылку</a>.</center>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

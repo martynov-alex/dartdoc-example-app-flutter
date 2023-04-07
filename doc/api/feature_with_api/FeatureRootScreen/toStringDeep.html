@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the toStringDeep method from the FeatureRootScreen class, for the Dart programming language.">
+  <title>toStringDeep method - FeatureRootScreen class - feature_with_api library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">dartdoc_example_flutter</a></li>
+    <li><a href="../../feature_with_api/feature_with_api-library.html">feature_with_api</a></li>
+    <li><a href="../../feature_with_api/FeatureRootScreen-class.html">FeatureRootScreen</a></li>
+    <li class="self-crumb">toStringDeep method</li>
+  </ol>
+  <div class="self-name">toStringDeep</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><span class="kind-method">toStringDeep</span> method 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype">String</span>
+<span class="name ">toStringDeep</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="toStringDeep-param-prefixLineOne">{<span class="type-annotation">String</span> <span class="parameter-name">prefixLineOne</span> = <span class="default-value">&#39;&#39;</span>, </span></li>
+<li><span class="parameter" id="toStringDeep-param-prefixOtherLines"><span class="type-annotation">String?</span> <span class="parameter-name">prefixOtherLines</span>, </span></li>
+<li><span class="parameter" id="toStringDeep-param-minLevel"><span class="type-annotation">DiagnosticLevel</span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span></li>
+</ol>)
+
+      <div class="features"><span class="feature">inherited</span></div>
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Returns a string representation of this node and its descendants.</p>
+<p><code>prefixLineOne</code> will be added to the front of the first line of the
+output. <code>prefixOtherLines</code> will be added to the front of each other line.
+If <code>prefixOtherLines</code> is null, the <code>prefixLineOne</code> is used for every line.
+By default, there is no prefix.</p>
+<p><code>minLevel</code> specifies the minimum <code>DiagnosticLevel</code> for properties included
+in the output.</p>
+<p>The <a href="../../feature_with_api/FeatureRootScreen/toStringDeep.html">toStringDeep</a> method takes other arguments, but those are intended
+for internal use when recursing to the descendants, and so can be ignored.</p>
+<p>See also:</p>
+<ul>
+<li><a href="../../feature_with_api/FeatureRootScreen/toString.html">toString</a>, for a brief description of the object but not its children.</li>
+<li><a href="../../feature_with_api/FeatureRootScreen/toStringShallow.html">toStringShallow</a>, for a detailed description of the object but not its
+children.</li>
+</ul>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">String toStringDeep({
+  String prefixLineOne = &#39;&#39;,
+  String? prefixOtherLines,
+  DiagnosticLevel minLevel = DiagnosticLevel.debug,
+}) {
+  return toDiagnosticsNode().toStringDeep(prefixLineOne: prefixLineOne, prefixOtherLines: prefixOtherLines, minLevel: minLevel);
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="../../index.html">dartdoc_example_flutter</a></li>
+  <li><a href="../../feature_with_api/feature_with_api-library.html">feature_with_api</a></li>
+  <li><a href="../../feature_with_api/FeatureRootScreen-class.html">FeatureRootScreen</a></li>
+  <li class="self-crumb">toStringDeep method</li>
+</ol>
+
+
+    <h5>FeatureRootScreen class</h5>
+    <ol>
+
+
+
+        <li class="section-title inherited">
+          <a href="../../feature_with_api/FeatureRootScreen-class.html#instance-properties">Properties</a>
+        </li>
+          <li class="inherited"><a href="../../feature_with_api/FeatureRootScreen/hashCode.html">hashCode</a></li>
+          <li class="inherited"><a href="../../feature_with_api/FeatureRootScreen/key.html">key</a></li>
+          <li class="inherited"><a href="../../feature_with_api/FeatureRootScreen/runtimeType.html">runtimeType</a></li>
+
+        <li class="section-title"><a href="../../feature_with_api/FeatureRootScreen-class.html#instance-methods">Methods</a></li>
+          <li class="inherited"><a href="../../feature_with_api/FeatureRootScreen/createElement.html">createElement</a></li>
+          <li><a href="../../feature_with_api/FeatureRootScreen/createState.html">createState</a></li>
+          <li class="inherited"><a href="../../feature_with_api/FeatureRootScreen/debugDescribeChildren.html">debugDescribeChildren</a></li>
+          <li class="inherited"><a href="../../feature_with_api/FeatureRootScreen/debugFillProperties.html">debugFillProperties</a></li>
+          <li class="inherited"><a href="../../feature_with_api/FeatureRootScreen/noSuchMethod.html">noSuchMethod</a></li>
+          <li class="inherited"><a href="../../feature_with_api/FeatureRootScreen/toDiagnosticsNode.html">toDiagnosticsNode</a></li>
+          <li class="inherited"><a href="../../feature_with_api/FeatureRootScreen/toString.html">toString</a></li>
+          <li class="inherited"><a href="../../feature_with_api/FeatureRootScreen/toStringDeep.html">toStringDeep</a></li>
+          <li class="inherited"><a href="../../feature_with_api/FeatureRootScreen/toStringShallow.html">toStringShallow</a></li>
+          <li class="inherited"><a href="../../feature_with_api/FeatureRootScreen/toStringShort.html">toStringShort</a></li>
+
+        <li class="section-title inherited"><a href="../../feature_with_api/FeatureRootScreen-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="../../feature_with_api/FeatureRootScreen/operator_equals.html">operator ==</a></li>
+
+
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dartdoc_example_flutter
+      1.0.0+1
+  </span>
+
+  <center>Тут можно разместить кастомный текст или <a href="https://surf.ru/">ссылку</a>.</center>
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

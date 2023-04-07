@@ -20,7 +20,7 @@ class FeatureDataEntity with _$FeatureDataEntity {
 /// {@template data_type_entity}
 /// Сущность типа данных.
 /// {@endtemplate}
-/// {@category Сущности}
+/// {@category Entity}
 enum DataTypeEntity {
   /// Заголовок.
   title('Заголовок'),
