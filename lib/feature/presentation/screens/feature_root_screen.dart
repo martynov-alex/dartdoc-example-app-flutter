@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 /// Корневой экран фичи.
 /// {@category Фича}
 class FeatureRootScreen extends StatefulWidget {
-  /// @nodoc.
+  /// @nodoc
   const FeatureRootScreen({super.key});
 
   @override

@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the debugFillProperties method from the FeatureWm class, for the Dart programming language.">
-  <title>debugFillProperties method - FeatureWm class - feature_with_api library - Dart API</title>
+  <meta name="description" content="API docs for the debugFillProperties method from the FeatureWM class, for the Dart programming language.">
+  <title>debugFillProperties method - FeatureWM class - feature_with_api library - Dart API</title>
 
 
   
@@ -30,7 +30,7 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">dartdoc_example_flutter</a></li>
     <li><a href="../../feature_with_api/feature_with_api-library.html">feature_with_api</a></li>
-    <li><a href="../../feature_with_api/FeatureWm-class.html">FeatureWm</a></li>
+    <li><a href="../../feature_with_api/FeatureWM-class.html">FeatureWM</a></li>
     <li class="self-crumb">debugFillProperties method</li>
   </ol>
   <div class="self-name">debugFillProperties</div>
@@ -40,18 +40,24 @@
   <div class="toggle" id="theme-button">
     <label for="theme">
       <input type="checkbox" id="theme" value="light-theme">
-      <span class="material-symbols-outlined">
+      <span id="dark-theme-button" class="material-symbols-outlined">
         brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
       </span>
     </label>
   </div>
 </header>
 <main>
 
-  <div id="dartdoc-main-content" class="main-content">
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="feature_with_api&#47;FeatureWM-class-sidebar.html"
+      data-below-sidebar="">
       <div>
 <h1><span class="kind-method">debugFillProperties</span> method 
-    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
 </h1></div>
 
     <section class="multi-line-signature">
@@ -73,6 +79,17 @@
     
 <section class="desc markdown">
   <p>Add additional properties associated with the node.</p>
+<iframe src="https://www.youtube.com/embed/DnC7eT-vh1k?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; 
+autoplay; 
+clipboard-write; 
+encrypted-media; 
+gyroscope; 
+picture-in-picture" allowfullscreen="" style="max-width: 560px;
+max-height: 315px;
+width: 100%;
+height: 100%;
+aspect-ratio: 560 / 315;">
+</iframe>
 <p>Use the most specific <code>DiagnosticsProperty</code> existing subclass to describe
 each property instead of the <code>DiagnosticsProperty</code> base class. There are
 only a small number of <code>DiagnosticsProperty</code> subclasses each covering a
@@ -94,10 +111,12 @@ as a flag.</li>
 <li>Specify <code>showName</code> and <code>showSeparator</code> in rare cases where the string
 output would look clumsy if they were not set.
 <pre class="language-dart"><code class="language-dart">DiagnosticsProperty&lt;Object&gt;('child(3, 4)', null, ifNull: 'is null', showSeparator: false).toString()
-</code></pre>Shows using <code>showSeparator</code> to get output <code>child(3, 4) is null</code> which
+</code></pre>
+Shows using <code>showSeparator</code> to get output <code>child(3, 4) is null</code> which
 is more polished than <code>child(3, 4): is null</code>.
 <pre class="language-dart"><code class="language-dart">DiagnosticsProperty&lt;IconData&gt;('icon', icon, ifNull: '&lt;empty&gt;', showName: false).toString()
-</code></pre>Shows using <code>showName</code> to omit the property name as in this context the
+</code></pre>
+Shows using <code>showName</code> to omit the property name as in this context the
 property name does not add useful information.</li>
 </ul>
 <p><code>ifNull</code>, <code>ifEmpty</code>, <code>unit</code>, and <code>tooltip</code> make property
@@ -140,7 +159,7 @@ that represent transforms. Generally any property value with a good
 <code>toString</code> method implementation works fine using <code>DiagnosticsProperty</code>
 directly.</p>
 <p>{@tool snippet}</p>
-<p>This example shows best practices for implementing <a href="../../feature_with_api/FeatureWm/debugFillProperties.html">debugFillProperties</a>
+<p>This example shows best practices for implementing <a href="../../feature_with_api/FeatureWM/debugFillProperties.html">debugFillProperties</a>
 illustrating use of all common <code>DiagnosticsProperty</code> subclasses and all
 common <code>DiagnosticsProperty</code> parameters.</p>
 <pre class="language-dart"><code class="language-dart">class ExampleObject extends ExampleSuperclass {
@@ -191,7 +210,7 @@ common <code>DiagnosticsProperty</code> parameters.</p>
     // without a space.
     properties.add(DoubleProperty(
       'device pixel ratio',
-      ui.window.devicePixelRatio,
+      devicePixelRatio,
       tooltip: 'physical pixels per logical pixel',
     ));
 
@@ -265,7 +284,8 @@ common <code>DiagnosticsProperty</code> parameters.</p>
 }
 </code></pre>
 <p>{@end-tool}</p>
-<p>Used by <a href="../../feature_with_api/FeatureWm/toDiagnosticsNode.html">toDiagnosticsNode</a> and <a href="../../feature_with_api/FeatureWm/toString.html">toString</a>.</p>
+<p>Used by <a href="../../feature_with_api/FeatureWM/toDiagnosticsNode.html">toDiagnosticsNode</a> and <a href="../../feature_with_api/FeatureWM/toString.html">toString</a>.</p>
+<p>Do not add values, that have lifetime shorter than the object.</p>
 </section>
 
 
@@ -281,66 +301,22 @@ void debugFillProperties(DiagnosticPropertiesBuilder properties) { }</code></pre
   </div> <!-- /.main-content -->
 
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
-    <header id="header-search-sidebar" class="hidden-l">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
   <form class="search-sidebar" role="search">
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
 
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
-  <li><a href="../../index.html">dartdoc_example_flutter</a></li>
-  <li><a href="../../feature_with_api/feature_with_api-library.html">feature_with_api</a></li>
-  <li><a href="../../feature_with_api/FeatureWm-class.html">FeatureWm</a></li>
-  <li class="self-crumb">debugFillProperties method</li>
+    <li><a href="../../index.html">dartdoc_example_flutter</a></li>
+    <li><a href="../../feature_with_api/feature_with_api-library.html">feature_with_api</a></li>
+    <li><a href="../../feature_with_api/FeatureWM-class.html">FeatureWM</a></li>
+    <li class="self-crumb">debugFillProperties method</li>
 </ol>
 
 
-    <h5>FeatureWm class</h5>
-    <ol>
-
-        <li class="section-title"><a href="../../feature_with_api/FeatureWm-class.html#constructors">Constructors</a></li>
-          <li><a href="../../feature_with_api/FeatureWm/FeatureWm.create.html">create</a></li>
-
-
-        <li class="section-title">
-          <a href="../../feature_with_api/FeatureWm-class.html#instance-properties">Properties</a>
-        </li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureWm/context.html">context</a></li>
-          <li><a href="../../feature_with_api/FeatureWm/featureDataState.html">featureDataState</a></li>
-          <li class="inherited"><a href="../../feature_with_api/IFeatureWm/hashCode.html">hashCode</a></li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureWm/isMounted.html">isMounted</a></li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureWm/model.html">model</a></li>
-          <li class="inherited"><a href="../../feature_with_api/IFeatureWm/runtimeType.html">runtimeType</a></li>
-          <li><a href="../../feature_with_api/FeatureWm/screenTitle.html">screenTitle</a></li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureWm/widget.html">widget</a></li>
-
-        <li class="section-title"><a href="../../feature_with_api/FeatureWm-class.html#instance-methods">Methods</a></li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureWm/activate.html">activate</a></li>
-          <li><a href="../../feature_with_api/FeatureWm/back.html">back</a></li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureWm/deactivate.html">deactivate</a></li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureWm/debugFillProperties.html">debugFillProperties</a></li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureWm/didChangeDependencies.html">didChangeDependencies</a></li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureWm/didUpdateWidget.html">didUpdateWidget</a></li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureWm/dispose.html">dispose</a></li>
-          <li><a href="../../feature_with_api/FeatureWm/fetch.html">fetch</a></li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureWm/initWidgetModel.html">initWidgetModel</a></li>
-          <li class="inherited"><a href="../../feature_with_api/IFeatureWm/noSuchMethod.html">noSuchMethod</a></li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureWm/onErrorHandle.html">onErrorHandle</a></li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureWm/reassemble.html">reassemble</a></li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureWm/setupTestElement.html">setupTestElement</a></li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureWm/setupTestWidget.html">setupTestWidget</a></li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureWm/toDiagnosticsNode.html">toDiagnosticsNode</a></li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureWm/toString.html">toString</a></li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureWm/toStringShort.html">toStringShort</a></li>
-
-        <li class="section-title inherited"><a href="../../feature_with_api/FeatureWm-class.html#operators">Operators</a></li>
-          <li class="inherited"><a href="../../feature_with_api/IFeatureWm/operator_equals.html">operator ==</a></li>
-
-
-
-
-</ol>
-
+    <h5>FeatureWM class</h5>
   </div><!--/.sidebar-offcanvas-->
 
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">

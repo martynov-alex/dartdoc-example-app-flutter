@@ -40,18 +40,24 @@
   <div class="toggle" id="theme-button">
     <label for="theme">
       <input type="checkbox" id="theme" value="light-theme">
-      <span class="material-symbols-outlined">
+      <span id="dark-theme-button" class="material-symbols-outlined">
         brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
       </span>
     </label>
   </div>
 </header>
 <main>
 
-  <div id="dartdoc-main-content" class="main-content">
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="feature_with_api&#47;FeatureRootScreen-class-sidebar.html"
+      data-below-sidebar="">
       <div>
 <h1><span class="kind-method">debugFillProperties</span> method 
-    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
 </h1></div>
 
     <section class="multi-line-signature">
@@ -72,6 +78,17 @@
     
 <section class="desc markdown">
   <p>Add additional properties associated with the node.</p>
+<iframe src="https://www.youtube.com/embed/DnC7eT-vh1k?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; 
+autoplay; 
+clipboard-write; 
+encrypted-media; 
+gyroscope; 
+picture-in-picture" allowfullscreen="" style="max-width: 560px;
+max-height: 315px;
+width: 100%;
+height: 100%;
+aspect-ratio: 560 / 315;">
+</iframe>
 <p>Use the most specific <code>DiagnosticsProperty</code> existing subclass to describe
 each property instead of the <code>DiagnosticsProperty</code> base class. There are
 only a small number of <code>DiagnosticsProperty</code> subclasses each covering a
@@ -93,10 +110,12 @@ as a flag.</li>
 <li>Specify <code>showName</code> and <code>showSeparator</code> in rare cases where the string
 output would look clumsy if they were not set.
 <pre class="language-dart"><code class="language-dart">DiagnosticsProperty&lt;Object&gt;('child(3, 4)', null, ifNull: 'is null', showSeparator: false).toString()
-</code></pre>Shows using <code>showSeparator</code> to get output <code>child(3, 4) is null</code> which
+</code></pre>
+Shows using <code>showSeparator</code> to get output <code>child(3, 4) is null</code> which
 is more polished than <code>child(3, 4): is null</code>.
 <pre class="language-dart"><code class="language-dart">DiagnosticsProperty&lt;IconData&gt;('icon', icon, ifNull: '&lt;empty&gt;', showName: false).toString()
-</code></pre>Shows using <code>showName</code> to omit the property name as in this context the
+</code></pre>
+Shows using <code>showName</code> to omit the property name as in this context the
 property name does not add useful information.</li>
 </ul>
 <p><code>ifNull</code>, <code>ifEmpty</code>, <code>unit</code>, and <code>tooltip</code> make property
@@ -190,7 +209,7 @@ common <code>DiagnosticsProperty</code> parameters.</p>
     // without a space.
     properties.add(DoubleProperty(
       'device pixel ratio',
-      ui.window.devicePixelRatio,
+      devicePixelRatio,
       tooltip: 'physical pixels per logical pixel',
     ));
 
@@ -265,6 +284,7 @@ common <code>DiagnosticsProperty</code> parameters.</p>
 </code></pre>
 <p>{@end-tool}</p>
 <p>Used by <a href="../../feature_with_api/FeatureRootScreen/toDiagnosticsNode.html">toDiagnosticsNode</a> and <a href="../../feature_with_api/FeatureRootScreen/toString.html">toString</a>.</p>
+<p>Do not add values, that have lifetime shorter than the object.</p>
 </section>
 
 
@@ -282,52 +302,22 @@ void debugFillProperties(DiagnosticPropertiesBuilder properties) {
   </div> <!-- /.main-content -->
 
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
-    <header id="header-search-sidebar" class="hidden-l">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
   <form class="search-sidebar" role="search">
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
 
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
-  <li><a href="../../index.html">dartdoc_example_flutter</a></li>
-  <li><a href="../../feature_with_api/feature_with_api-library.html">feature_with_api</a></li>
-  <li><a href="../../feature_with_api/FeatureRootScreen-class.html">FeatureRootScreen</a></li>
-  <li class="self-crumb">debugFillProperties method</li>
+    <li><a href="../../index.html">dartdoc_example_flutter</a></li>
+    <li><a href="../../feature_with_api/feature_with_api-library.html">feature_with_api</a></li>
+    <li><a href="../../feature_with_api/FeatureRootScreen-class.html">FeatureRootScreen</a></li>
+    <li class="self-crumb">debugFillProperties method</li>
 </ol>
 
 
     <h5>FeatureRootScreen class</h5>
-    <ol>
-
-
-
-        <li class="section-title inherited">
-          <a href="../../feature_with_api/FeatureRootScreen-class.html#instance-properties">Properties</a>
-        </li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureRootScreen/hashCode.html">hashCode</a></li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureRootScreen/key.html">key</a></li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureRootScreen/runtimeType.html">runtimeType</a></li>
-
-        <li class="section-title"><a href="../../feature_with_api/FeatureRootScreen-class.html#instance-methods">Methods</a></li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureRootScreen/createElement.html">createElement</a></li>
-          <li><a href="../../feature_with_api/FeatureRootScreen/createState.html">createState</a></li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureRootScreen/debugDescribeChildren.html">debugDescribeChildren</a></li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureRootScreen/debugFillProperties.html">debugFillProperties</a></li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureRootScreen/noSuchMethod.html">noSuchMethod</a></li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureRootScreen/toDiagnosticsNode.html">toDiagnosticsNode</a></li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureRootScreen/toString.html">toString</a></li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureRootScreen/toStringDeep.html">toStringDeep</a></li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureRootScreen/toStringShallow.html">toStringShallow</a></li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureRootScreen/toStringShort.html">toStringShort</a></li>
-
-        <li class="section-title inherited"><a href="../../feature_with_api/FeatureRootScreen-class.html#operators">Operators</a></li>
-          <li class="inherited"><a href="../../feature_with_api/FeatureRootScreen/operator_equals.html">operator ==</a></li>
-
-
-
-
-</ol>
-
   </div><!--/.sidebar-offcanvas-->
 
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">

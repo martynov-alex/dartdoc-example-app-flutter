@@ -3,24 +3,16 @@ import 'package:dartdoc_example_flutter/feature/domain/repositories/i_feature_re
 import 'package:dartdoc_example_flutter/feature/presentation/screens/feature/feature_screen.dart';
 import 'package:elementary/elementary.dart';
 
-/// Интерфейс [ElementaryModel] экрана фичи [FeatureScreen].
+/// Бизнес-логика экрана фичи [FeatureScreen].
 /// {@category Фича}
 /// {@category Elementary}
-abstract class IFeatureModel extends ElementaryModel {
-  /// Получить данные по фиче.
-  Future<FeatureDataEntity> get();
-}
-
-/// Реализация [IFeatureModel].
-/// {@category Фича}
-/// {@category Elementary}
-class FeatureModel extends ElementaryModel implements IFeatureModel {
+class FeatureModel extends ElementaryModel {
   final IFeatureRepository _featureRepository;
 
-  /// @nodoc.
+  /// @nodoc
   FeatureModel({required IFeatureRepository featureRepository})
       : _featureRepository = featureRepository;
 
-  @override
+  /// Получить данные по фиче.
   Future<FeatureDataEntity> get() async => _featureRepository.get();
 }

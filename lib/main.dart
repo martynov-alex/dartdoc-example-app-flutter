@@ -7,7 +7,7 @@ void main() {
 
 /// Точка входа в приложение.
 class DartDocExample extends StatelessWidget {
-  /// @nodoc.
+  /// @nodoc
   const DartDocExample({super.key});
 
   @override
@@ -17,15 +17,14 @@ class DartDocExample extends StatelessWidget {
         primarySwatch: Colors.green,
         useMaterial3: true,
       ),
-      home:
-          const MyHomePage(title: 'Приложение для демонстрации работы dartdoc'),
+      home: const MyHomePage(title: 'Приложение для демонстрации работы dartdoc'),
     );
   }
 }
 
 /// Главная страница приложения.
 class MyHomePage extends StatefulWidget {
-  /// @nodoc.
+  /// @nodoc
   const MyHomePage({super.key, required this.title});
 
   /// Заголовок в AppBar.
@@ -51,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text('Приложение для демонстрации работы dartdoc'),
+            Text(widget.title),
             const SizedBox(height: 100),
             ElevatedButton(
               onPressed: () => Navigator.push(

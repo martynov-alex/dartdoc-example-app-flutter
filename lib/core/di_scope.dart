@@ -1,5 +1,3 @@
-// ignore_for_file: library_private_types_in_public_api
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -24,19 +22,21 @@ class DiScope<T> extends StatefulWidget {
   /// {@endtemplate}
   final Dispose<T>? dispose;
 
-  /// @nodoc.
+  /// @nodoc
   const DiScope({
     required this.factory,
     required this.child,
     this.dispose,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
-  _DiScopeState createState() => _DiScopeState<T>();
+  DiScopeState<T> createState() => DiScopeState<T>();
 }
 
-class _DiScopeState<T> extends State<DiScope<T>> {
+/// Состояние DI контейнера.
+class DiScopeState<T> extends State<DiScope<T>> {
+  /// Cкоуп зависимостей.
   late T scope;
 
   @override

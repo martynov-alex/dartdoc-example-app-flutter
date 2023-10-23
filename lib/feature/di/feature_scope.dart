@@ -21,7 +21,7 @@ class FeatureScope implements IFeatureScope {
   late final _dio = Dio();
   late final _api = FeatureApi(_dio);
 
-  /// @nodoc.
+  /// @nodoc
   FeatureScope() {
     featureRepository = FeatureRepository(featureApi: _api);
   }

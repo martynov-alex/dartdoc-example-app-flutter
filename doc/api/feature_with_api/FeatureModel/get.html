@@ -40,32 +40,33 @@
   <div class="toggle" id="theme-button">
     <label for="theme">
       <input type="checkbox" id="theme" value="light-theme">
-      <span class="material-symbols-outlined">
+      <span id="dark-theme-button" class="material-symbols-outlined">
         brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
       </span>
     </label>
   </div>
 </header>
 <main>
 
-  <div id="dartdoc-main-content" class="main-content">
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="feature_with_api&#47;FeatureModel-class-sidebar.html"
+      data-below-sidebar="">
       <div>
 <h1><span class="kind-method">get</span> method 
-    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
 </h1></div>
 
     <section class="multi-line-signature">
       
-  <div>
-    <ol class="annotation-list">
-        <li>@override</li>
-    </ol>
-  </div>
 
 <span class="returntype">Future<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../feature_with_api/FeatureDataEntity-class.html">FeatureDataEntity</a></span>&gt;</span></span>
 <span class="name ">get</span>(<wbr>)
 
-      <div class="features"><span class="feature">override</span></div>
+      
 
     </section>
     
@@ -77,56 +78,29 @@
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">@override
-Future&lt;FeatureDataEntity&gt; get() async =&gt; _featureRepository.get();</code></pre>
+  <pre class="language-dart"><code class="language-dart">Future&lt;FeatureDataEntity&gt; get() async =&gt; _featureRepository.get();</code></pre>
 </section>
 
 
   </div> <!-- /.main-content -->
 
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
-    <header id="header-search-sidebar" class="hidden-l">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
   <form class="search-sidebar" role="search">
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
 
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
-  <li><a href="../../index.html">dartdoc_example_flutter</a></li>
-  <li><a href="../../feature_with_api/feature_with_api-library.html">feature_with_api</a></li>
-  <li><a href="../../feature_with_api/FeatureModel-class.html">FeatureModel</a></li>
-  <li class="self-crumb">get method</li>
+    <li><a href="../../index.html">dartdoc_example_flutter</a></li>
+    <li><a href="../../feature_with_api/feature_with_api-library.html">feature_with_api</a></li>
+    <li><a href="../../feature_with_api/FeatureModel-class.html">FeatureModel</a></li>
+    <li class="self-crumb">get method</li>
 </ol>
 
 
     <h5>FeatureModel class</h5>
-    <ol>
-
-
-
-        <li class="section-title inherited">
-          <a href="../../feature_with_api/FeatureModel-class.html#instance-properties">Properties</a>
-        </li>
-          <li class="inherited"><a href="../../feature_with_api/IFeatureModel/hashCode.html">hashCode</a></li>
-          <li class="inherited"><a href="../../feature_with_api/IFeatureModel/runtimeType.html">runtimeType</a></li>
-
-        <li class="section-title"><a href="../../feature_with_api/FeatureModel-class.html#instance-methods">Methods</a></li>
-          <li class="inherited"><a href="../../feature_with_api/IFeatureModel/dispose.html">dispose</a></li>
-          <li><a href="../../feature_with_api/FeatureModel/get.html">get</a></li>
-          <li class="inherited"><a href="../../feature_with_api/IFeatureModel/handleError.html">handleError</a></li>
-          <li class="inherited"><a href="../../feature_with_api/IFeatureModel/init.html">init</a></li>
-          <li class="inherited"><a href="../../feature_with_api/IFeatureModel/noSuchMethod.html">noSuchMethod</a></li>
-          <li class="inherited"><a href="../../feature_with_api/IFeatureModel/setupWmHandler.html">setupWmHandler</a></li>
-          <li class="inherited"><a href="../../feature_with_api/IFeatureModel/toString.html">toString</a></li>
-
-        <li class="section-title inherited"><a href="../../feature_with_api/FeatureModel-class.html#operators">Operators</a></li>
-          <li class="inherited"><a href="../../feature_with_api/IFeatureModel/operator_equals.html">operator ==</a></li>
-
-
-
-
-</ol>
-
   </div><!--/.sidebar-offcanvas-->
 
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">

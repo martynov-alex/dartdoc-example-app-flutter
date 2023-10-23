@@ -38,19 +38,25 @@
   <div class="toggle" id="theme-button">
     <label for="theme">
       <input type="checkbox" id="theme" value="light-theme">
-      <span class="material-symbols-outlined">
+      <span id="dark-theme-button" class="material-symbols-outlined">
         brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
       </span>
     </label>
   </div>
 </header>
 <main>
 
-  <div id="dartdoc-main-content" class="main-content">
-    
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar=""
+      data-below-sidebar="feature_with_api&#47;feature_with_api-library-sidebar.html">
+      
       <div>
 <h1><span class="kind-library">feature_with_api</span> library 
-    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
  
 </h1></div>
 
@@ -126,7 +132,7 @@
 
 </dt>
 <dd>
-  Реализация <a href="../feature_with_api/IFeatureModel-class.html">IFeatureModel</a>.
+  Бизнес-логика экрана фичи <a href="../feature_with_api/FeatureScreen-class.html">FeatureScreen</a>.
 </dd>
 
         <dt id="FeatureRepository">
@@ -166,24 +172,14 @@
   Экран фичи.
 </dd>
 
-        <dt id="FeatureWm">
-  <span class="name "><a href="../feature_with_api/FeatureWm-class.html">FeatureWm</a></span> 
+        <dt id="FeatureWM">
+  <span class="name "><a href="../feature_with_api/FeatureWM-class.html">FeatureWM</a></span> 
     <span class="category фича cp-3 linked" title="This is part of the Фича topic."><a href="../topics/Фича-topic.html">Фича</a></span>
     <span class="category elementary cp-4" title="This is part of the Elementary topic.">Elementary</span>
 
 </dt>
 <dd>
-  Реализация <a href="../feature_with_api/IFeatureWm-class.html">IFeatureWm</a>.
-</dd>
-
-        <dt id="IFeatureModel">
-  <span class="name "><a href="../feature_with_api/IFeatureModel-class.html">IFeatureModel</a></span> 
-    <span class="category фича cp-3 linked" title="This is part of the Фича topic."><a href="../topics/Фича-topic.html">Фича</a></span>
-    <span class="category elementary cp-4" title="This is part of the Elementary topic.">Elementary</span>
-
-</dt>
-<dd>
-  Интерфейс <code>ElementaryModel</code> экрана фичи <a href="../feature_with_api/FeatureScreen-class.html">FeatureScreen</a>.
+  Реализация <a href="../feature_with_api/IFeatureWM-class.html">IFeatureWM</a>.
 </dd>
 
         <dt id="IFeatureRepository">
@@ -205,8 +201,8 @@
   DI скоуп фичи.
 </dd>
 
-        <dt id="IFeatureWm">
-  <span class="name "><a href="../feature_with_api/IFeatureWm-class.html">IFeatureWm</a></span> 
+        <dt id="IFeatureWM">
+  <span class="name "><a href="../feature_with_api/IFeatureWM-class.html">IFeatureWM</a></span> 
     <span class="category фича cp-3 linked" title="This is part of the Фича topic."><a href="../topics/Фича-topic.html">Фича</a></span>
     <span class="category elementary cp-4" title="This is part of the Elementary topic.">Elementary</span>
 
@@ -222,6 +218,25 @@
 
 
 
+    <section class="summary offset-anchor" id="functions">
+      <h2>Functions</h2>
+
+      <dl class="callables">
+        <dt id="featureWMFactory" class="callable">
+  <span class="name"><a href="../feature_with_api/featureWMFactory.html">featureWMFactory</a></span><span class="signature">(<wbr><span class="parameter" id="featureWMFactory-param-context"><span class="type-annotation">BuildContext</span> <span class="parameter-name">context</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../feature_with_api/FeatureWM-class.html">FeatureWM</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Фабрика создания <a href="../feature_with_api/FeatureWM-class.html">FeatureWM</a>.
+  
+
+</dd>
+
+      </dl>
+    </section>
 
     <section class="summary offset-anchor" id="enums">
       <h2>Enums</h2>
@@ -253,15 +268,16 @@
   </div> <!-- /.main-content -->
 
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
-    <header id="header-search-sidebar" class="hidden-l">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
   <form class="search-sidebar" role="search">
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
 
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
-  <li><a href="../index.html">dartdoc_example_flutter</a></li>
-  <li class="self-crumb">feature_with_api library</li>
+    <li><a href="../index.html">dartdoc_example_flutter</a></li>
+    <li class="self-crumb">feature_with_api library</li>
 </ol>
 
 
@@ -280,37 +296,6 @@
 
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
     <h5>feature_with_api library</h5>
-    <ol>
-      <li class="section-title"><a href="../feature_with_api/feature_with_api-library.html#classes">Classes</a></li>
-        <li><a href="../feature_with_api/DataTypeDto-class.html">DataTypeDto</a></li>
-        <li><a href="../feature_with_api/DataTypeEntityMapper-class.html">DataTypeEntityMapper</a></li>
-        <li><a href="../feature_with_api/FeatureApi-class.html">FeatureApi</a></li>
-        <li><a href="../feature_with_api/FeatureDataDto-class.html">FeatureDataDto</a></li>
-        <li><a href="../feature_with_api/FeatureDataEntity-class.html">FeatureDataEntity</a></li>
-        <li><a href="../feature_with_api/FeatureEntityMapper-class.html">FeatureEntityMapper</a></li>
-        <li><a href="../feature_with_api/FeatureModel-class.html">FeatureModel</a></li>
-        <li><a href="../feature_with_api/FeatureRepository-class.html">FeatureRepository</a></li>
-        <li><a href="../feature_with_api/FeatureRootScreen-class.html">FeatureRootScreen</a></li>
-        <li><a href="../feature_with_api/FeatureScope-class.html">FeatureScope</a></li>
-        <li><a href="../feature_with_api/FeatureScreen-class.html">FeatureScreen</a></li>
-        <li><a href="../feature_with_api/FeatureWm-class.html">FeatureWm</a></li>
-        <li><a href="../feature_with_api/IFeatureModel-class.html">IFeatureModel</a></li>
-        <li><a href="../feature_with_api/IFeatureRepository-class.html">IFeatureRepository</a></li>
-        <li><a href="../feature_with_api/IFeatureScope-class.html">IFeatureScope</a></li>
-        <li><a href="../feature_with_api/IFeatureWm-class.html">IFeatureWm</a></li>
-
-
-
-
-
-
-      <li class="section-title"><a href="../feature_with_api/feature_with_api-library.html#enums">Enums</a></li>
-        <li><a href="../feature_with_api/DataType.html">DataType</a></li>
-        <li><a href="../feature_with_api/DataTypeEntity.html">DataTypeEntity</a></li>
-
-
-</ol>
-
   </div><!--/sidebar-offcanvas-right-->
 
 </main>

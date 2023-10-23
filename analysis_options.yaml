@@ -9,10 +9,6 @@ linter:
     prefer_mixin: false
     one_member_abstracts: false
 
-dart_code_metrics:
-  rules:
-        - prefer-match-file-name: false
-
 analyzer:
   exclude:
     - "**.freezed.dart"

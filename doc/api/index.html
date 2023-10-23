@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="generator" content="made with love by dartdoc 6.1.5">
+  <meta name="generator" content="made with love by dartdoc 7.0.0-dev">
   <meta name="description" content="dartdoc_example_flutter API docs, for the Dart programming language.">
   <title>dartdoc_example_flutter - Dart API docs</title>
 
@@ -38,8 +38,11 @@
   <div class="toggle" id="theme-button">
     <label for="theme">
       <input type="checkbox" id="theme" value="light-theme">
-      <span class="material-symbols-outlined">
+      <span id="dark-theme-button" class="material-symbols-outlined">
         brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
       </span>
     </label>
   </div>
@@ -58,17 +61,20 @@
 <blockquote>
 <p>DO format comments like sentences.</p>
 </blockquote>
-<p>Благодаря тому, что комментарий выглядит как предложение (с точками в конце 😎), мы получаем документацию в едином стиле:</p><object data="assets/comments_1.png" width="300">
+<p>Благодаря тому, что комментарий выглядит как предложение (с точками в конце 😎), мы получаем документацию в едином стиле:</p>
+<object data="assets/comments_1.png" width="300">
 <img src="doc/api/assets/comments_1.png" width="300">
 </object>
 <h2 id="------">Дополнительные возможности документирования через теги в комментариях</h2>
 <p>Помимо простого текста в комментариях можно использовать теги, которые будут определенным образом интерпретированы при генерации документации.
 Рассмотрим основные.</p>
 <h4 id="category">@category</h4>
-<p>Этот тэг позволяет отнести элемент кода (класс, метод, переменную) к какой-либо категории. На странице документации категории отображаются в виде списка в разделе TOPICS:</p><object data="assets/tags_1.png" width="300">
+<p>Этот тэг позволяет отнести элемент кода (класс, метод, переменную) к какой-либо категории. На странице документации категории отображаются в виде списка в разделе TOPICS:</p>
+<object data="assets/tags_1.png" width="300">
 <img src="doc/api/assets/tags_1.png" width="300">
 </object>
-<p>При нажатии на ссылку открывается страница категории и список всех элементов, которые помечены этой категорией:</p><object data="assets/tags_2.png" width="300">
+<p>При нажатии на ссылку открывается страница категории и список всех элементов, которые помечены этой категорией:</p>
+<object data="assets/tags_2.png" width="300">
 <img src="doc/api/assets/tags_2.png" width="300">
 </object>
 <p>Также, как видно, элементы помечаются ярлыком указанной для них категории. При клике на ярлык опять же открывается страница категории.</p>
@@ -152,7 +158,8 @@ abstract class IFeatureScope {
 class FeatureScreen extends ElementaryWidget&lt;IFeatureWm&gt; {
 ...
 </code></pre>
-<p>Получится так:</p><object data="assets/html_1.png" width="600">
+<p>Получится так:</p>
+<object data="assets/html_1.png" width="600">
 <img src="doc/api/assets/html_1.png" width="600">
 </object>
 <p>Чтоб локальные ресурсы отобразились, они должны находится внутри папки со сгенерированной документацией. При этом нужно указывать относительный этой папки путь.</p>
@@ -192,7 +199,8 @@ Usage: dart doc [arguments] [&lt;directory&gt;]
 <p>Судя по документации, есть возможность сгенерировать документацию для отельной директории, но у меня это не удалось сделать.</p>
 <p>Получал такой результат:</p>
 <pre class="language-shell"><code class="language-shell">dart doc lib/core              
-Documenting dartdoc_example_flutter...                                                                                                                                       Initialized dartdoc with 20 libraries
+Documenting dartdoc_example_flutter...                                                                                                                                       
+Initialized dartdoc with 20 libraries
 no issues found
 Documented 0 public libraries in 6.6 seconds
 dartdoc could not find any libraries to document
@@ -232,7 +240,8 @@ Success! Docs generated into /.../dartdoc_example_flutter/doc/api
 </blockquote>
 <p><code>categories</code> – это список категорий, которые имеют свою markdown страницу (обязательно должна быть указана) и отображаются в меню слева в разделе TOPICS.</p>
 <p>Порядок отображения определяется списком в <code>categoryOrder</code>.</p>
-<p>Если категория не находится в списке <code>categories</code>, то она не отображается в списке категорий, но может отображаться в виде некликабельного ярлыка, если указана настройка <code>showUndocumentedCategories: true</code>. В нашем примере это категория  <code>Elementary</code>, которую мы добавили для всех классов наследников этой библиотеки:</p><object data="assets/options_1.png" width="340">
+<p>Если категория не находится в списке <code>categories</code>, то она не отображается в списке категорий, но может отображаться в виде некликабельного ярлыка, если указана настройка <code>showUndocumentedCategories: true</code>. В нашем примере это категория  <code>Elementary</code>, которую мы добавили для всех классов наследников этой библиотеки:</p>
+<object data="assets/options_1.png" width="340">
 <img src="doc/api/assets/options_1.png" width="340">
 </object>
 <h4 id="include"><code>include</code></h4>
@@ -240,7 +249,8 @@ Success! Docs generated into /.../dartdoc_example_flutter/doc/api
 <p><strong>include</strong>: Specify a list of library names to generate docs for, ignoring all others. All libraries listed must be local to this package (unlike the command line&nbsp;<code>--include</code>)</p>
 </blockquote>
 <p>Этот параметр позволяет включить в документацию только выбранные библиотеки.</p>
-<p>Тут важно еще отметить, что по-умолчанию <em>все</em> dart файлы проекта попадают в список библиотек слева:</p><object data="assets/options_2.png" width="200">
+<p>Тут важно еще отметить, что по-умолчанию <em>все</em> dart файлы проекта попадают в список библиотек слева:</p>
+<object data="assets/options_2.png" width="200">
 <img src="doc/api/assets/options_2.png" width="200">
 </object>
 <p>Т.е. если проект большой, то там находится просто один огромный список всех файлов, которые отсортированы по алфавиту.</p>
@@ -251,7 +261,8 @@ Success! Docs generated into /.../dartdoc_example_flutter/doc/api
 <pre class="language-dart"><code>failed: Did not find: [feature_api, feature_data_dto] in known libraries: []
 </code></pre>
 <p>Т.е. хоть файлы и находятся в списке библиотек, получить документацию по отдельным нельзя. По крайней мере мне не удалось.</p>
-<p>Библиотеками, которые можно включить в <code>include</code> являются только файлы  помеченные как <code>library</code>.  Т.е. если мы в feature_api.dart и feature_data_dto.dart добавим в начало соотвественно <code>library feature_api;</code> и <code>library feature_data_dto;</code>, то сможем получить документацию только по ним:</p><object data="assets/options_3.png" width="500">
+<p>Библиотеками, которые можно включить в <code>include</code> являются только файлы  помеченные как <code>library</code>.  Т.е. если мы в feature_api.dart и feature_data_dto.dart добавим в начало соотвественно <code>library feature_api;</code> и <code>library feature_data_dto;</code>, то сможем получить документацию только по ним:</p>
+<object data="assets/options_3.png" width="500">
 <img src="doc/api/assets/options_3.png" width="500">
 </object>
 <p>Также мы можем с использованием ключевого слова <code>export</code> добавить в библиотеку нужные файлы:</p>
@@ -276,7 +287,8 @@ export 'feature/feature_wm.dart';
 export 'feature_root_screen.dart';
 </code></pre>
 <p>Таким образом мы модульно собираем нужную нам библиотеку из нужных нам файлов.</p>
-<p>В итоге если включить в <code>include</code> только <code>feature_with_api</code> и сгенерировать документацию, то мы получим следующее:</p><object data="assets/options_4.png" width="600">
+<p>В итоге если включить в <code>include</code> только <code>feature_with_api</code> и сгенерировать документацию, то мы получим следующее:</p>
+<object data="assets/options_4.png" width="600">
 <img src="doc/api/assets/options_4.png" width="600">
 </object>
 <p>При этом, возможно, при генерации встретить предупреждение:</p>
@@ -314,7 +326,8 @@ const IconWidget({super.key});
 <p>Добавим в <code>footer</code> дополнительную подпись:</p>
 <pre class="language-yaml"><code class="language-yaml">footerText: ['doc/header_footer/footer.html']  
 </code></pre>
-<p>Будет так:</p><object data="assets/options_5.png" width="400">
+<p>Будет так:</p>
+<object data="assets/options_5.png" width="400">
 <img src="doc/api/assets/options_5.png" width="400">
 </object>
 <h4 id="favicon">favicon</h4>
@@ -359,6 +372,13 @@ $ dhttpd --path doc/api
 </code></pre>
 <p>Далее надо перейти на <code>http://localhost:8080</code> для просмотра.</p>
 <p>Также можно сгенерировать документацию в markdown.</p>
+<h2 id="---readmemd">Отображение картинок в README.md</h2>
+<p>Т.е. текст README.md должен отображать картинки и на GitHub и при просмотре через HTTP сервер необходимо использовать такой код для картинок:</p>
+<pre class="language-html"><code class="language-html">&lt;object data='assets/html_1.png' width="600"&gt;  
+    &lt;img src='doc/api/assets/html_1.png' width="600"&gt;  
+&lt;/object&gt;
+</code></pre>
+<p>Это позволит задать два относительных источника для картинки.</p>
 </section>
 
 
@@ -378,14 +398,15 @@ $ dhttpd --path doc/api
   </div> <!-- /.main-content -->
 
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
-    <header id="header-search-sidebar" class="hidden-l">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
   <form class="search-sidebar" role="search">
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
 
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
-  <li class="self-crumb">dartdoc_example_flutter package</li>
+    <li class="self-crumb">dartdoc_example_flutter package</li>
 </ol>
 
 

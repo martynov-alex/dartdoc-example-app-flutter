@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the noSuchMethod method from the IFeatureWm class, for the Dart programming language.">
-  <title>noSuchMethod method - IFeatureWm class - feature_with_api library - Dart API</title>
+  <meta name="description" content="API docs for the noSuchMethod method from the IFeatureWM class, for the Dart programming language.">
+  <title>noSuchMethod method - IFeatureWM class - feature_with_api library - Dart API</title>
 
 
   
@@ -30,7 +30,7 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">dartdoc_example_flutter</a></li>
     <li><a href="../../feature_with_api/feature_with_api-library.html">feature_with_api</a></li>
-    <li><a href="../../feature_with_api/IFeatureWm-class.html">IFeatureWm</a></li>
+    <li><a href="../../feature_with_api/IFeatureWM-class.html">IFeatureWM</a></li>
     <li class="self-crumb">noSuchMethod method</li>
   </ol>
   <div class="self-name">noSuchMethod</div>
@@ -40,18 +40,24 @@
   <div class="toggle" id="theme-button">
     <label for="theme">
       <input type="checkbox" id="theme" value="light-theme">
-      <span class="material-symbols-outlined">
+      <span id="dark-theme-button" class="material-symbols-outlined">
         brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
       </span>
     </label>
   </div>
 </header>
 <main>
 
-  <div id="dartdoc-main-content" class="main-content">
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="feature_with_api&#47;IFeatureWM-class-sidebar.html"
+      data-below-sidebar="">
       <div>
 <h1><span class="kind-method">noSuchMethod</span> method 
-    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
 </h1></div>
 
     <section class="multi-line-signature">
@@ -66,7 +72,7 @@
     </section>
     
 <section class="desc markdown">
-  <p>Invoked when a non-existent method or property is accessed.</p>
+  <p>Invoked when a nonexistent method or property is accessed.</p>
 <p>A dynamic member invocation can attempt to call a member which
 doesn't exist on the receiving object. Example:</p>
 <pre class="language-dart"><code class="language-dart">dynamic object = 1;
@@ -75,9 +81,9 @@ object.add(42); // Statically allowed, run-time error
 <p>This invalid code will invoke the <code>noSuchMethod</code> method
 of the integer <code>1</code> with an <code>Invocation</code> representing the
 <code>.add(42)</code> call and arguments (which then throws).</p>
-<p>Classes can override <a href="../../feature_with_api/IFeatureWm/noSuchMethod.html">noSuchMethod</a> to provide custom behavior
+<p>Classes can override <a href="../../feature_with_api/IFeatureWM/noSuchMethod.html">noSuchMethod</a> to provide custom behavior
 for such invalid dynamic invocations.</p>
-<p>A class with a non-default <a href="../../feature_with_api/IFeatureWm/noSuchMethod.html">noSuchMethod</a> invocation can also
+<p>A class with a non-default <a href="../../feature_with_api/IFeatureWM/noSuchMethod.html">noSuchMethod</a> invocation can also
 omit implementations for members of its interface.
 Example:</p>
 <pre class="language-dart"><code class="language-dart">class MockList&lt;T&gt; implements List&lt;T&gt; {
@@ -116,49 +122,22 @@ external dynamic noSuchMethod(Invocation invocation);</code></pre>
   </div> <!-- /.main-content -->
 
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
-    <header id="header-search-sidebar" class="hidden-l">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
   <form class="search-sidebar" role="search">
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
 
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
-  <li><a href="../../index.html">dartdoc_example_flutter</a></li>
-  <li><a href="../../feature_with_api/feature_with_api-library.html">feature_with_api</a></li>
-  <li><a href="../../feature_with_api/IFeatureWm-class.html">IFeatureWm</a></li>
-  <li class="self-crumb">noSuchMethod method</li>
+    <li><a href="../../index.html">dartdoc_example_flutter</a></li>
+    <li><a href="../../feature_with_api/feature_with_api-library.html">feature_with_api</a></li>
+    <li><a href="../../feature_with_api/IFeatureWM-class.html">IFeatureWM</a></li>
+    <li class="self-crumb">noSuchMethod method</li>
 </ol>
 
 
-    <h5>IFeatureWm class</h5>
-    <ol>
-
-        <li class="section-title"><a href="../../feature_with_api/IFeatureWm-class.html#constructors">Constructors</a></li>
-          <li><a href="../../feature_with_api/IFeatureWm/IFeatureWm.html">IFeatureWm</a></li>
-
-
-        <li class="section-title">
-          <a href="../../feature_with_api/IFeatureWm-class.html#instance-properties">Properties</a>
-        </li>
-          <li><a href="../../feature_with_api/IFeatureWm/featureDataState.html">featureDataState</a></li>
-          <li class="inherited"><a href="../../feature_with_api/IFeatureWm/hashCode.html">hashCode</a></li>
-          <li class="inherited"><a href="../../feature_with_api/IFeatureWm/runtimeType.html">runtimeType</a></li>
-          <li><a href="../../feature_with_api/IFeatureWm/screenTitle.html">screenTitle</a></li>
-
-        <li class="section-title"><a href="../../feature_with_api/IFeatureWm-class.html#instance-methods">Methods</a></li>
-          <li><a href="../../feature_with_api/IFeatureWm/back.html">back</a></li>
-          <li><a href="../../feature_with_api/IFeatureWm/fetch.html">fetch</a></li>
-          <li class="inherited"><a href="../../feature_with_api/IFeatureWm/noSuchMethod.html">noSuchMethod</a></li>
-          <li class="inherited"><a href="../../feature_with_api/IFeatureWm/toString.html">toString</a></li>
-
-        <li class="section-title inherited"><a href="../../feature_with_api/IFeatureWm-class.html#operators">Operators</a></li>
-          <li class="inherited"><a href="../../feature_with_api/IFeatureWm/operator_equals.html">operator ==</a></li>
-
-
-
-
-</ol>
-
+    <h5>IFeatureWM class</h5>
   </div><!--/.sidebar-offcanvas-->
 
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">

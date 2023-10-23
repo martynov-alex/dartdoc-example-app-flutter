@@ -2,14 +2,14 @@ library feature_data_dto;
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'feature_data_dto.g.dart';
 part 'feature_data_dto.freezed.dart';
+part 'feature_data_dto.g.dart';
 
 /// DTO с данными по фиче.
 /// {@category Фича}
 @freezed
 class FeatureDataDto with _$FeatureDataDto {
-  /// @nodoc.
+  /// @nodoc
   const factory FeatureDataDto({
     /// Данные.
     required String data,
@@ -19,8 +19,7 @@ class FeatureDataDto with _$FeatureDataDto {
   }) = _FeatureDataDto;
 
   /// Метод преобразования [json] в [FeatureDataDto].
-  factory FeatureDataDto.fromJson(Map<String, dynamic> json) =>
-      _$FeatureDataDtoFromJson(json);
+  factory FeatureDataDto.fromJson(Map<String, dynamic> json) => _$FeatureDataDtoFromJson(json);
 }
 
 /// {@template data_type_dto}
@@ -29,7 +28,7 @@ class FeatureDataDto with _$FeatureDataDto {
 /// {@category Фича}
 @freezed
 class DataTypeDto with _$DataTypeDto {
-  /// @nodoc.
+  /// @nodoc
   const factory DataTypeDto({
     /// {@macro data_type}
     required DataType dataType,
@@ -39,8 +38,7 @@ class DataTypeDto with _$DataTypeDto {
   }) = _DataTypeDto;
 
   /// Метод преобразования [json] в [DataTypeDto].
-  factory DataTypeDto.fromJson(Map<String, dynamic> json) =>
-      _$DataTypeDtoFromJson(json);
+  factory DataTypeDto.fromJson(Map<String, dynamic> json) => _$DataTypeDtoFromJson(json);
 }
 
 /// {@template data_type}

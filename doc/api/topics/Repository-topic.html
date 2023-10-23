@@ -38,8 +38,11 @@
   <div class="toggle" id="theme-button">
     <label for="theme">
       <input type="checkbox" id="theme" value="light-theme">
-      <span class="material-symbols-outlined">
+      <span id="dark-theme-button" class="material-symbols-outlined">
         brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
       </span>
     </label>
   </div>
@@ -94,15 +97,16 @@
 </div> <!-- /.main-content -->
 
 <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
-  <header id="header-search-sidebar" class="hidden-l">
+  <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
   <form class="search-sidebar" role="search">
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
 
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
-  <li><a href="../index.html">dartdoc_example_flutter</a></li>
-  <li class="self-crumb">Repository topic</li>
+    <li><a href="../index.html">dartdoc_example_flutter</a></li>
+    <li class="self-crumb">Repository topic</li>
 </ol>
 
 

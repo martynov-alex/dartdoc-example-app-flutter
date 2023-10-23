@@ -66,22 +66,22 @@ class _$FeatureDataEntityCopyWithImpl<$Res, $Val extends FeatureDataEntity>
 }
 
 /// @nodoc
-abstract class _$$_FeatureDataEntityCopyWith<$Res>
+abstract class _$$FeatureDataEntityImplCopyWith<$Res>
     implements $FeatureDataEntityCopyWith<$Res> {
-  factory _$$_FeatureDataEntityCopyWith(_$_FeatureDataEntity value,
-          $Res Function(_$_FeatureDataEntity) then) =
-      __$$_FeatureDataEntityCopyWithImpl<$Res>;
+  factory _$$FeatureDataEntityImplCopyWith(_$FeatureDataEntityImpl value,
+          $Res Function(_$FeatureDataEntityImpl) then) =
+      __$$FeatureDataEntityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String data, DataTypeEntity dataType});
 }
 
 /// @nodoc
-class __$$_FeatureDataEntityCopyWithImpl<$Res>
-    extends _$FeatureDataEntityCopyWithImpl<$Res, _$_FeatureDataEntity>
-    implements _$$_FeatureDataEntityCopyWith<$Res> {
-  __$$_FeatureDataEntityCopyWithImpl(
-      _$_FeatureDataEntity _value, $Res Function(_$_FeatureDataEntity) _then)
+class __$$FeatureDataEntityImplCopyWithImpl<$Res>
+    extends _$FeatureDataEntityCopyWithImpl<$Res, _$FeatureDataEntityImpl>
+    implements _$$FeatureDataEntityImplCopyWith<$Res> {
+  __$$FeatureDataEntityImplCopyWithImpl(_$FeatureDataEntityImpl _value,
+      $Res Function(_$FeatureDataEntityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -90,7 +90,7 @@ class __$$_FeatureDataEntityCopyWithImpl<$Res>
     Object? data = null,
     Object? dataType = null,
   }) {
-    return _then(_$_FeatureDataEntity(
+    return _then(_$FeatureDataEntityImpl(
       data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
@@ -105,8 +105,8 @@ class __$$_FeatureDataEntityCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FeatureDataEntity implements _FeatureDataEntity {
-  const _$_FeatureDataEntity({required this.data, required this.dataType});
+class _$FeatureDataEntityImpl implements _FeatureDataEntity {
+  const _$FeatureDataEntityImpl({required this.data, required this.dataType});
 
   /// Данные.
   @override
@@ -125,7 +125,7 @@ class _$_FeatureDataEntity implements _FeatureDataEntity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FeatureDataEntity &&
+            other is _$FeatureDataEntityImpl &&
             (identical(other.data, data) || other.data == data) &&
             (identical(other.dataType, dataType) ||
                 other.dataType == dataType));
@@ -137,15 +137,15 @@ class _$_FeatureDataEntity implements _FeatureDataEntity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FeatureDataEntityCopyWith<_$_FeatureDataEntity> get copyWith =>
-      __$$_FeatureDataEntityCopyWithImpl<_$_FeatureDataEntity>(
+  _$$FeatureDataEntityImplCopyWith<_$FeatureDataEntityImpl> get copyWith =>
+      __$$FeatureDataEntityImplCopyWithImpl<_$FeatureDataEntityImpl>(
           this, _$identity);
 }
 
 abstract class _FeatureDataEntity implements FeatureDataEntity {
   const factory _FeatureDataEntity(
       {required final String data,
-      required final DataTypeEntity dataType}) = _$_FeatureDataEntity;
+      required final DataTypeEntity dataType}) = _$FeatureDataEntityImpl;
 
   @override
 
@@ -157,6 +157,6 @@ abstract class _FeatureDataEntity implements FeatureDataEntity {
   DataTypeEntity get dataType;
   @override
   @JsonKey(ignore: true)
-  _$$_FeatureDataEntityCopyWith<_$_FeatureDataEntity> get copyWith =>
+  _$$FeatureDataEntityImplCopyWith<_$FeatureDataEntityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

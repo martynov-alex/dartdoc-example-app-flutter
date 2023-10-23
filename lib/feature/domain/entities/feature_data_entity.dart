@@ -7,7 +7,7 @@ part 'feature_data_entity.freezed.dart';
 /// {@category Фича}
 @freezed
 class FeatureDataEntity with _$FeatureDataEntity {
-  /// @nodoc.
+  /// @nodoc
   const factory FeatureDataEntity({
     /// Данные.
     required String data,
@@ -31,7 +31,7 @@ enum DataTypeEntity {
   /// Информация.
   info('Информация');
 
-  /// @nodoc.
+  /// @nodoc
   const DataTypeEntity(this.typeName);
 
   /// Наименование типа данных.

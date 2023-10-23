@@ -40,18 +40,24 @@
   <div class="toggle" id="theme-button">
     <label for="theme">
       <input type="checkbox" id="theme" value="light-theme">
-      <span class="material-symbols-outlined">
+      <span id="dark-theme-button" class="material-symbols-outlined">
         brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
       </span>
     </label>
   </div>
 </header>
 <main>
 
-  <div id="dartdoc-main-content" class="main-content">
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="feature_with_api&#47;DataType-enum-sidebar.html"
+      data-below-sidebar="">
       <div>
 <h1><span class="kind-property">runtimeType</span> property 
-    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
 </h1></div>
 
 
@@ -83,52 +89,22 @@
   </div> <!-- /.main-content -->
 
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
-    <header id="header-search-sidebar" class="hidden-l">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
   <form class="search-sidebar" role="search">
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
 
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
-  <li><a href="../../index.html">dartdoc_example_flutter</a></li>
-  <li><a href="../../feature_with_api/feature_with_api-library.html">feature_with_api</a></li>
-  <li><a href="../../feature_with_api/DataType.html">DataType</a></li>
-  <li class="self-crumb">runtimeType property</li>
+    <li><a href="../../index.html">dartdoc_example_flutter</a></li>
+    <li><a href="../../feature_with_api/feature_with_api-library.html">feature_with_api</a></li>
+    <li><a href="../../feature_with_api/DataType.html">DataType</a></li>
+    <li class="self-crumb">runtimeType property</li>
 </ol>
 
 
     <h5>DataType enum</h5>
-    <ol>
-
-        <li class="section-title"><a href="../../feature_with_api/DataType.html#constructors">Constructors</a></li>
-          <li><a href="../../feature_with_api/DataType/DataType.html">DataType</a></li>
-
-        <li class="section-title"><a href="../../feature_with_api/DataType.html#values">Values</a></li>
-          <li><a href="../../feature_with_api/DataType.html#title">title</a></li>
-          <li><a href="../../feature_with_api/DataType.html#subtitle">subtitle</a></li>
-          <li><a href="../../feature_with_api/DataType.html#info">info</a></li>
-
-        <li class="section-title inherited">
-          <a href="../../feature_with_api/DataType.html#instance-properties">Properties</a>
-        </li>
-          <li class="inherited"><a href="../../feature_with_api/DataType/hashCode.html">hashCode</a></li>
-          <li class="inherited"><a href="../../feature_with_api/DataType/index.html">index</a></li>
-          <li class="inherited"><a href="../../feature_with_api/DataType/runtimeType.html">runtimeType</a></li>
-
-        <li class="section-title inherited"><a href="../../feature_with_api/DataType.html#instance-methods">Methods</a></li>
-          <li class="inherited"><a href="../../feature_with_api/DataType/noSuchMethod.html">noSuchMethod</a></li>
-          <li class="inherited"><a href="../../feature_with_api/DataType/toString.html">toString</a></li>
-
-        <li class="section-title inherited"><a href="../../feature_with_api/DataType.html#operators">Operators</a></li>
-          <li class="inherited"><a href="../../feature_with_api/DataType/operator_equals.html">operator ==</a></li>
-
-
-
-
-        <li class="section-title"><a href="../../feature_with_api/DataType.html#constants">Constants</a></li>
-          <li><a href="../../feature_with_api/DataType/values-constant.html">values</a></li>
-</ol>
-
   </div><!--/.sidebar-offcanvas-->
 
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">

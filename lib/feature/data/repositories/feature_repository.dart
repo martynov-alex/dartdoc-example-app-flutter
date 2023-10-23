@@ -13,6 +13,7 @@ const _dataTypes = DataTypeEntity.values;
 /// {@category Repository}
 /// {@category Фича}
 class FeatureRepository implements IFeatureRepository {
+  // не используется, добавлено до примера
   final FeatureApi _featureApi;
 
   /// Конструктор.

@@ -3,6 +3,7 @@ import 'package:dartdoc_example_flutter/feature/presentation/screens/feature/fea
 import 'package:dartdoc_example_flutter/feature/presentation/widgets/icon_widget.dart';
 import 'package:dartdoc_example_flutter/feature/presentation/widgets/text_widget.dart';
 import 'package:elementary/elementary.dart';
+import 'package:elementary_helper/elementary_helper.dart';
 import 'package:flutter/material.dart';
 
 /// Экран фичи.
@@ -15,15 +16,15 @@ import 'package:flutter/material.dart';
 /// <iframe width="480" height="270" src="https://www.youtube.com/embed/YYb3KBXa624"/>
 /// {@category Фича}
 /// {@category Elementary}
-class FeatureScreen extends ElementaryWidget<IFeatureWm> {
-  /// @nodoc.
+class FeatureScreen extends ElementaryWidget<IFeatureWM> {
+  /// @nodoc
   const FeatureScreen({
     Key? key,
-    WidgetModelFactory wmFactory = FeatureWm.create,
+    WidgetModelFactory wmFactory = featureWMFactory,
   }) : super(wmFactory, key: key);
 
   @override
-  Widget build(IFeatureWm wm) {
+  Widget build(IFeatureWM wm) {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(

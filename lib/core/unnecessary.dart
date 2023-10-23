@@ -3,7 +3,7 @@ class Unnecessary {
   /// Поле, которое никому не интересно.
   final bool unnecessaryField;
 
-  /// @nodoc.
+  /// @nodoc
   Unnecessary(this.unnecessaryField);
 
   /// Метод, который не должен попасть в документацию.

@@ -81,11 +81,11 @@ class _$FeatureDataDtoCopyWithImpl<$Res, $Val extends FeatureDataDto>
 }
 
 /// @nodoc
-abstract class _$$_FeatureDataDtoCopyWith<$Res>
+abstract class _$$FeatureDataDtoImplCopyWith<$Res>
     implements $FeatureDataDtoCopyWith<$Res> {
-  factory _$$_FeatureDataDtoCopyWith(
-          _$_FeatureDataDto value, $Res Function(_$_FeatureDataDto) then) =
-      __$$_FeatureDataDtoCopyWithImpl<$Res>;
+  factory _$$FeatureDataDtoImplCopyWith(_$FeatureDataDtoImpl value,
+          $Res Function(_$FeatureDataDtoImpl) then) =
+      __$$FeatureDataDtoImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String data, DataTypeDto dataTypeDto});
@@ -95,11 +95,11 @@ abstract class _$$_FeatureDataDtoCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FeatureDataDtoCopyWithImpl<$Res>
-    extends _$FeatureDataDtoCopyWithImpl<$Res, _$_FeatureDataDto>
-    implements _$$_FeatureDataDtoCopyWith<$Res> {
-  __$$_FeatureDataDtoCopyWithImpl(
-      _$_FeatureDataDto _value, $Res Function(_$_FeatureDataDto) _then)
+class __$$FeatureDataDtoImplCopyWithImpl<$Res>
+    extends _$FeatureDataDtoCopyWithImpl<$Res, _$FeatureDataDtoImpl>
+    implements _$$FeatureDataDtoImplCopyWith<$Res> {
+  __$$FeatureDataDtoImplCopyWithImpl(
+      _$FeatureDataDtoImpl _value, $Res Function(_$FeatureDataDtoImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -108,7 +108,7 @@ class __$$_FeatureDataDtoCopyWithImpl<$Res>
     Object? data = null,
     Object? dataTypeDto = null,
   }) {
-    return _then(_$_FeatureDataDto(
+    return _then(_$FeatureDataDtoImpl(
       data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
@@ -123,11 +123,11 @@ class __$$_FeatureDataDtoCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_FeatureDataDto implements _FeatureDataDto {
-  const _$_FeatureDataDto({required this.data, required this.dataTypeDto});
+class _$FeatureDataDtoImpl implements _FeatureDataDto {
+  const _$FeatureDataDtoImpl({required this.data, required this.dataTypeDto});
 
-  factory _$_FeatureDataDto.fromJson(Map<String, dynamic> json) =>
-      _$$_FeatureDataDtoFromJson(json);
+  factory _$FeatureDataDtoImpl.fromJson(Map<String, dynamic> json) =>
+      _$$FeatureDataDtoImplFromJson(json);
 
   /// Данные.
   @override
@@ -146,7 +146,7 @@ class _$_FeatureDataDto implements _FeatureDataDto {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FeatureDataDto &&
+            other is _$FeatureDataDtoImpl &&
             (identical(other.data, data) || other.data == data) &&
             (identical(other.dataTypeDto, dataTypeDto) ||
                 other.dataTypeDto == dataTypeDto));
@@ -159,12 +159,13 @@ class _$_FeatureDataDto implements _FeatureDataDto {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FeatureDataDtoCopyWith<_$_FeatureDataDto> get copyWith =>
-      __$$_FeatureDataDtoCopyWithImpl<_$_FeatureDataDto>(this, _$identity);
+  _$$FeatureDataDtoImplCopyWith<_$FeatureDataDtoImpl> get copyWith =>
+      __$$FeatureDataDtoImplCopyWithImpl<_$FeatureDataDtoImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FeatureDataDtoToJson(
+    return _$$FeatureDataDtoImplToJson(
       this,
     );
   }
@@ -173,10 +174,10 @@ class _$_FeatureDataDto implements _FeatureDataDto {
 abstract class _FeatureDataDto implements FeatureDataDto {
   const factory _FeatureDataDto(
       {required final String data,
-      required final DataTypeDto dataTypeDto}) = _$_FeatureDataDto;
+      required final DataTypeDto dataTypeDto}) = _$FeatureDataDtoImpl;
 
   factory _FeatureDataDto.fromJson(Map<String, dynamic> json) =
-      _$_FeatureDataDto.fromJson;
+      _$FeatureDataDtoImpl.fromJson;
 
   @override
 
@@ -188,7 +189,7 @@ abstract class _FeatureDataDto implements FeatureDataDto {
   DataTypeDto get dataTypeDto;
   @override
   @JsonKey(ignore: true)
-  _$$_FeatureDataDtoCopyWith<_$_FeatureDataDto> get copyWith =>
+  _$$FeatureDataDtoImplCopyWith<_$FeatureDataDtoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -249,22 +250,22 @@ class _$DataTypeDtoCopyWithImpl<$Res, $Val extends DataTypeDto>
 }
 
 /// @nodoc
-abstract class _$$_DataTypeDtoCopyWith<$Res>
+abstract class _$$DataTypeDtoImplCopyWith<$Res>
     implements $DataTypeDtoCopyWith<$Res> {
-  factory _$$_DataTypeDtoCopyWith(
-          _$_DataTypeDto value, $Res Function(_$_DataTypeDto) then) =
-      __$$_DataTypeDtoCopyWithImpl<$Res>;
+  factory _$$DataTypeDtoImplCopyWith(
+          _$DataTypeDtoImpl value, $Res Function(_$DataTypeDtoImpl) then) =
+      __$$DataTypeDtoImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({DataType dataType, String description});
 }
 
 /// @nodoc
-class __$$_DataTypeDtoCopyWithImpl<$Res>
-    extends _$DataTypeDtoCopyWithImpl<$Res, _$_DataTypeDto>
-    implements _$$_DataTypeDtoCopyWith<$Res> {
-  __$$_DataTypeDtoCopyWithImpl(
-      _$_DataTypeDto _value, $Res Function(_$_DataTypeDto) _then)
+class __$$DataTypeDtoImplCopyWithImpl<$Res>
+    extends _$DataTypeDtoCopyWithImpl<$Res, _$DataTypeDtoImpl>
+    implements _$$DataTypeDtoImplCopyWith<$Res> {
+  __$$DataTypeDtoImplCopyWithImpl(
+      _$DataTypeDtoImpl _value, $Res Function(_$DataTypeDtoImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -273,7 +274,7 @@ class __$$_DataTypeDtoCopyWithImpl<$Res>
     Object? dataType = null,
     Object? description = null,
   }) {
-    return _then(_$_DataTypeDto(
+    return _then(_$DataTypeDtoImpl(
       dataType: null == dataType
           ? _value.dataType
           : dataType // ignore: cast_nullable_to_non_nullable
@@ -288,11 +289,11 @@ class __$$_DataTypeDtoCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DataTypeDto implements _DataTypeDto {
-  const _$_DataTypeDto({required this.dataType, required this.description});
+class _$DataTypeDtoImpl implements _DataTypeDto {
+  const _$DataTypeDtoImpl({required this.dataType, required this.description});
 
-  factory _$_DataTypeDto.fromJson(Map<String, dynamic> json) =>
-      _$$_DataTypeDtoFromJson(json);
+  factory _$DataTypeDtoImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DataTypeDtoImplFromJson(json);
 
   /// {@macro data_type}
   @override
@@ -311,7 +312,7 @@ class _$_DataTypeDto implements _DataTypeDto {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DataTypeDto &&
+            other is _$DataTypeDtoImpl &&
             (identical(other.dataType, dataType) ||
                 other.dataType == dataType) &&
             (identical(other.description, description) ||
@@ -325,12 +326,12 @@ class _$_DataTypeDto implements _DataTypeDto {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DataTypeDtoCopyWith<_$_DataTypeDto> get copyWith =>
-      __$$_DataTypeDtoCopyWithImpl<_$_DataTypeDto>(this, _$identity);
+  _$$DataTypeDtoImplCopyWith<_$DataTypeDtoImpl> get copyWith =>
+      __$$DataTypeDtoImplCopyWithImpl<_$DataTypeDtoImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DataTypeDtoToJson(
+    return _$$DataTypeDtoImplToJson(
       this,
     );
   }
@@ -339,10 +340,10 @@ class _$_DataTypeDto implements _DataTypeDto {
 abstract class _DataTypeDto implements DataTypeDto {
   const factory _DataTypeDto(
       {required final DataType dataType,
-      required final String description}) = _$_DataTypeDto;
+      required final String description}) = _$DataTypeDtoImpl;
 
   factory _DataTypeDto.fromJson(Map<String, dynamic> json) =
-      _$_DataTypeDto.fromJson;
+      _$DataTypeDtoImpl.fromJson;
 
   @override
 
@@ -354,6 +355,6 @@ abstract class _DataTypeDto implements DataTypeDto {
   String get description;
   @override
   @JsonKey(ignore: true)
-  _$$_DataTypeDtoCopyWith<_$_DataTypeDto> get copyWith =>
+  _$$DataTypeDtoImplCopyWith<_$DataTypeDtoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

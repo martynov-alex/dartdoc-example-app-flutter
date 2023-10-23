@@ -39,18 +39,24 @@
   <div class="toggle" id="theme-button">
     <label for="theme">
       <input type="checkbox" id="theme" value="light-theme">
-      <span class="material-symbols-outlined">
+      <span id="dark-theme-button" class="material-symbols-outlined">
         brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
       </span>
     </label>
   </div>
 </header>
 <main>
 
-  <div id="dartdoc-main-content" class="main-content">
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="feature_with_api&#47;feature_with_api-library-sidebar.html"
+      data-below-sidebar="feature_with_api&#47;FeatureModel-class-sidebar.html">
       <div>
 <h1><span class="kind-class">FeatureModel</span> class 
-    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
  
     <span class="category фича cp-3 linked" title="This is part of the Фича topic."><a href="../topics/Фича-topic.html">Фича</a></span>
     <span class="category elementary cp-4" title="This is part of the Elementary topic.">Elementary</span>
@@ -58,30 +64,10 @@
 
     
 <section class="desc markdown">
-  <p>Реализация <a href="../feature_with_api/IFeatureModel-class.html">IFeatureModel</a>.</p>
+  <p>Бизнес-логика экрана фичи <a href="../feature_with_api/FeatureScreen-class.html">FeatureScreen</a>.</p>
 </section>
 
 
-    <section>
-      <dl class="dl-horizontal">
-        
-
-        
-  <dt>Implemented types</dt>
-  <dd>
-    <ul class="comma-separated clazz-relationships">
-        <li><a href="../feature_with_api/IFeatureModel-class.html">IFeatureModel</a></li>
-    </ul>
-  </dd>
-        
-
-
-
-        
-
-
-      </dl>
-    </section>
 
     
 
@@ -90,7 +76,7 @@
 
       <dl class="properties">
         <dt id="hashCode" class="property inherited">
-  <span class="name"><a href="../feature_with_api/IFeatureModel/hashCode.html">hashCode</a></span>
+  <span class="name"><a href="../feature_with_api/FeatureModel/hashCode.html">hashCode</a></span>
   <span class="signature">&#8594; int</span> 
 
 </dt>
@@ -101,7 +87,7 @@
 </dd>
 
         <dt id="runtimeType" class="property inherited">
-  <span class="name"><a href="../feature_with_api/IFeatureModel/runtimeType.html">runtimeType</a></span>
+  <span class="name"><a href="../feature_with_api/FeatureModel/runtimeType.html">runtimeType</a></span>
   <span class="signature">&#8594; Type</span> 
 
 </dt>
@@ -121,14 +107,14 @@
     <h2>Methods</h2>
     <dl class="callables">
         <dt id="dispose" class="callable inherited">
-  <span class="name"><a href="../feature_with_api/IFeatureModel/dispose.html">dispose</a></span><span class="signature">(<wbr>)
+  <span class="name"><a href="../feature_with_api/FeatureModel/dispose.html">dispose</a></span><span class="signature">(<wbr>)
     <span class="returntype parameter">&#8594; void</span>
   </span>
   
 
 </dt>
 <dd class="inherited">
-  Called when Widget Model disposing.
+  Prepares the <code>ElementaryModel</code> to be completely destroyed.
   <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
@@ -142,52 +128,52 @@
 </dt>
 <dd>
   Получить данные по фиче.
-  <div class="features"><span class="feature">override</span></div>
+  
 
 </dd>
 
         <dt id="handleError" class="callable inherited">
-  <span class="name"><a href="../feature_with_api/IFeatureModel/handleError.html">handleError</a></span><span class="signature">(<wbr><span class="parameter" id="handleError-param-error"><span class="type-annotation">Object</span> <span class="parameter-name">error</span>, </span><span class="parameter" id="handleError-param-stackTrace">{<span class="type-annotation">StackTrace?</span> <span class="parameter-name">stackTrace</span>}</span>)
+  <span class="name"><a href="../feature_with_api/FeatureModel/handleError.html">handleError</a></span><span class="signature">(<wbr><span class="parameter" id="handleError-param-error"><span class="type-annotation">Object</span> <span class="parameter-name">error</span>, </span><span class="parameter" id="handleError-param-stackTrace">{<span class="type-annotation">StackTrace?</span> <span class="parameter-name">stackTrace</span>}</span>)
     <span class="returntype parameter">&#8594; void</span>
   </span>
   
 
 </dt>
 <dd class="inherited">
-  Should be used for report error Error Handler if it was set and notify
-Widget Model about error.
+  Can be used for send <code>error</code> to <code>ErrorHandler</code> if it defined and notify
+<code>WidgetModel</code>.
   <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
 
         <dt id="init" class="callable inherited">
-  <span class="name"><a href="../feature_with_api/IFeatureModel/init.html">init</a></span><span class="signature">(<wbr>)
+  <span class="name"><a href="../feature_with_api/FeatureModel/init.html">init</a></span><span class="signature">(<wbr>)
     <span class="returntype parameter">&#8594; void</span>
   </span>
   
 
 </dt>
 <dd class="inherited">
-  Method for initialize this Model.
+  Initializes <code>ElementaryModel</code>.
   <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
 
         <dt id="noSuchMethod" class="callable inherited">
-  <span class="name"><a href="../feature_with_api/IFeatureModel/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+  <span class="name"><a href="../feature_with_api/FeatureModel/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
     <span class="returntype parameter">&#8594; dynamic</span>
   </span>
   
 
 </dt>
 <dd class="inherited">
-  Invoked when a non-existent method or property is accessed.
+  Invoked when a nonexistent method or property is accessed.
   <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
 
         <dt id="setupWmHandler" class="callable inherited">
-  <span class="name"><a href="../feature_with_api/IFeatureModel/setupWmHandler.html">setupWmHandler</a></span><span class="signature">(<wbr><span class="parameter" id="setupWmHandler-param-function"><span class="type-annotation">dynamic</span> <span class="parameter-name">function</span>(<span class="parameter" id="param-"><span class="type-annotation">Object</span></span>)?</span>)
+  <span class="name"><a href="../feature_with_api/FeatureModel/setupWmHandler.html">setupWmHandler</a></span><span class="signature">(<wbr><span class="parameter" id="setupWmHandler-param-function"><span class="type-annotation">void</span> <span class="parameter-name">function</span>(<span class="parameter" id="param-"><span class="type-annotation">Object</span></span>)?</span>)
     <span class="returntype parameter">&#8594; void</span>
   </span>
   
@@ -201,7 +187,7 @@ This method can be used to WidgetModels error handler.
 </dd>
 
         <dt id="toString" class="callable inherited">
-  <span class="name"><a href="../feature_with_api/IFeatureModel/toString.html">toString</a></span><span class="signature">(<wbr>)
+  <span class="name"><a href="../feature_with_api/FeatureModel/toString.html">toString</a></span><span class="signature">(<wbr>)
     <span class="returntype parameter">&#8594; String</span>
   </span>
   
@@ -222,7 +208,7 @@ This method can be used to WidgetModels error handler.
     <h2>Operators</h2>
     <dl class="callables">
         <dt id="operator ==" class="callable inherited">
-  <span class="name"><a href="../feature_with_api/IFeatureModel/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+  <span class="name"><a href="../feature_with_api/FeatureModel/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
     <span class="returntype parameter">&#8594; bool</span>
   </span>
   
@@ -244,81 +230,25 @@ This method can be used to WidgetModels error handler.
   </div> <!-- /.main-content -->
 
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
-    <header id="header-search-sidebar" class="hidden-l">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
   <form class="search-sidebar" role="search">
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
 
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
-  <li><a href="../index.html">dartdoc_example_flutter</a></li>
-  <li><a href="../feature_with_api/feature_with_api-library.html">feature_with_api</a></li>
-  <li class="self-crumb">FeatureModel class</li>
+    <li><a href="../index.html">dartdoc_example_flutter</a></li>
+    <li><a href="../feature_with_api/feature_with_api-library.html">feature_with_api</a></li>
+    <li class="self-crumb">FeatureModel class</li>
 </ol>
 
 
-    <h5>feature_with_api library</h5>
-    <ol>
-      <li class="section-title"><a href="../feature_with_api/feature_with_api-library.html#classes">Classes</a></li>
-        <li><a href="../feature_with_api/DataTypeDto-class.html">DataTypeDto</a></li>
-        <li><a href="../feature_with_api/DataTypeEntityMapper-class.html">DataTypeEntityMapper</a></li>
-        <li><a href="../feature_with_api/FeatureApi-class.html">FeatureApi</a></li>
-        <li><a href="../feature_with_api/FeatureDataDto-class.html">FeatureDataDto</a></li>
-        <li><a href="../feature_with_api/FeatureDataEntity-class.html">FeatureDataEntity</a></li>
-        <li><a href="../feature_with_api/FeatureEntityMapper-class.html">FeatureEntityMapper</a></li>
-        <li><a href="../feature_with_api/FeatureModel-class.html">FeatureModel</a></li>
-        <li><a href="../feature_with_api/FeatureRepository-class.html">FeatureRepository</a></li>
-        <li><a href="../feature_with_api/FeatureRootScreen-class.html">FeatureRootScreen</a></li>
-        <li><a href="../feature_with_api/FeatureScope-class.html">FeatureScope</a></li>
-        <li><a href="../feature_with_api/FeatureScreen-class.html">FeatureScreen</a></li>
-        <li><a href="../feature_with_api/FeatureWm-class.html">FeatureWm</a></li>
-        <li><a href="../feature_with_api/IFeatureModel-class.html">IFeatureModel</a></li>
-        <li><a href="../feature_with_api/IFeatureRepository-class.html">IFeatureRepository</a></li>
-        <li><a href="../feature_with_api/IFeatureScope-class.html">IFeatureScope</a></li>
-        <li><a href="../feature_with_api/IFeatureWm-class.html">IFeatureWm</a></li>
-
-
-
-
-
-
-      <li class="section-title"><a href="../feature_with_api/feature_with_api-library.html#enums">Enums</a></li>
-        <li><a href="../feature_with_api/DataType.html">DataType</a></li>
-        <li><a href="../feature_with_api/DataTypeEntity.html">DataTypeEntity</a></li>
-
-
-</ol>
-
+    <!--<h5>feature_with_api library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
   </div>
 
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
-    <ol>
-
-
-
-        <li class="section-title inherited">
-          <a href="../feature_with_api/FeatureModel-class.html#instance-properties">Properties</a>
-        </li>
-          <li class="inherited"><a href="../feature_with_api/IFeatureModel/hashCode.html">hashCode</a></li>
-          <li class="inherited"><a href="../feature_with_api/IFeatureModel/runtimeType.html">runtimeType</a></li>
-
-        <li class="section-title"><a href="../feature_with_api/FeatureModel-class.html#instance-methods">Methods</a></li>
-          <li class="inherited"><a href="../feature_with_api/IFeatureModel/dispose.html">dispose</a></li>
-          <li><a href="../feature_with_api/FeatureModel/get.html">get</a></li>
-          <li class="inherited"><a href="../feature_with_api/IFeatureModel/handleError.html">handleError</a></li>
-          <li class="inherited"><a href="../feature_with_api/IFeatureModel/init.html">init</a></li>
-          <li class="inherited"><a href="../feature_with_api/IFeatureModel/noSuchMethod.html">noSuchMethod</a></li>
-          <li class="inherited"><a href="../feature_with_api/IFeatureModel/setupWmHandler.html">setupWmHandler</a></li>
-          <li class="inherited"><a href="../feature_with_api/IFeatureModel/toString.html">toString</a></li>
-
-        <li class="section-title inherited"><a href="../feature_with_api/FeatureModel-class.html#operators">Operators</a></li>
-          <li class="inherited"><a href="../feature_with_api/IFeatureModel/operator_equals.html">operator ==</a></li>
-
-
-
-
-</ol>
-
   </div><!--/.sidebar-offcanvas-->
 
 </main>

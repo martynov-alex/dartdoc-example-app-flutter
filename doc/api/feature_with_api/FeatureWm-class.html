@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the FeatureWm class from the feature_with_api library, for the Dart programming language.">
-  <title>FeatureWm class - feature_with_api library - Dart API</title>
+  <meta name="description" content="API docs for the FeatureWM class from the feature_with_api library, for the Dart programming language.">
+  <title>FeatureWM class - feature_with_api library - Dart API</title>
 
 
   
@@ -30,27 +30,33 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">dartdoc_example_flutter</a></li>
     <li><a href="../feature_with_api/feature_with_api-library.html">feature_with_api</a></li>
-    <li class="self-crumb">FeatureWm class</li>
+    <li class="self-crumb">FeatureWM class</li>
   </ol>
-  <div class="self-name">FeatureWm</div>
+  <div class="self-name">FeatureWM</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
   <div class="toggle" id="theme-button">
     <label for="theme">
       <input type="checkbox" id="theme" value="light-theme">
-      <span class="material-symbols-outlined">
+      <span id="dark-theme-button" class="material-symbols-outlined">
         brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
       </span>
     </label>
   </div>
 </header>
 <main>
 
-  <div id="dartdoc-main-content" class="main-content">
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="feature_with_api&#47;feature_with_api-library-sidebar.html"
+      data-below-sidebar="feature_with_api&#47;FeatureWM-class-sidebar.html">
       <div>
-<h1><span class="kind-class">FeatureWm</span> class 
-    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+<h1><span class="kind-class">FeatureWM</span> class 
  
     <span class="category фича cp-3 linked" title="This is part of the Фича topic."><a href="../topics/Фича-topic.html">Фича</a></span>
     <span class="category elementary cp-4" title="This is part of the Elementary topic.">Elementary</span>
@@ -58,7 +64,7 @@
 
     
 <section class="desc markdown">
-  <p>Реализация <a href="../feature_with_api/IFeatureWm-class.html">IFeatureWm</a>.</p>
+  <p>Реализация <a href="../feature_with_api/IFeatureWM-class.html">IFeatureWM</a>.</p>
 </section>
 
 
@@ -70,7 +76,7 @@
   <dt>Implemented types</dt>
   <dd>
     <ul class="comma-separated clazz-relationships">
-        <li><a href="../feature_with_api/IFeatureWm-class.html">IFeatureWm</a></li>
+        <li><a href="../feature_with_api/IFeatureWM-class.html">IFeatureWM</a></li>
     </ul>
   </dd>
         
@@ -84,37 +90,24 @@
     </section>
 
     
-  <section class="summary offset-anchor" id="constructors">
-    <h2>Constructors</h2>
-
-    <dl class="constructor-summary-list">
-        <dt id="FeatureWm.create" class="callable">
-          <span class="name"><a href="../feature_with_api/FeatureWm/FeatureWm.create.html">FeatureWm.create</a></span><span class="signature">(<span class="parameter" id="create-param-context"><span class="type-annotation">BuildContext</span> <span class="parameter-name">context</span></span>)</span>
-        </dt>
-        <dd>
-          Фабрика создания <code>WidgetModel</code>.
-            <div class="constructor-modifier features">factory</div>
-        </dd>
-    </dl>
-  </section>
 
     <section class="summary offset-anchor" id="instance-properties">
       <h2>Properties</h2>
 
       <dl class="properties">
         <dt id="context" class="property inherited">
-  <span class="name"><a href="../feature_with_api/FeatureWm/context.html">context</a></span>
+  <span class="name"><a href="../feature_with_api/FeatureWM/context.html">context</a></span>
   <span class="signature">&#8594; BuildContext</span> 
 
 </dt>
 <dd class="inherited">
-  A handle to the location of a WidgetModel in the tree.
+  The location in the tree where this widget builds.
   <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
 
 </dd>
 
         <dt id="featureDataState" class="property">
-  <span class="name"><a href="../feature_with_api/FeatureWm/featureDataState.html">featureDataState</a></span>
+  <span class="name"><a href="../feature_with_api/FeatureWM/featureDataState.html">featureDataState</a></span>
   <span class="signature">&#8594; EntityStateNotifier<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../feature_with_api/FeatureDataEntity-class.html">FeatureDataEntity</a></span>&gt;</span></span> 
 
 </dt>
@@ -125,7 +118,7 @@
 </dd>
 
         <dt id="hashCode" class="property inherited">
-  <span class="name"><a href="../feature_with_api/IFeatureWm/hashCode.html">hashCode</a></span>
+  <span class="name"><a href="../feature_with_api/IFeatureWM/hashCode.html">hashCode</a></span>
   <span class="signature">&#8594; int</span> 
 
 </dt>
@@ -136,30 +129,29 @@
 </dd>
 
         <dt id="isMounted" class="property inherited">
-  <span class="name"><a href="../feature_with_api/FeatureWm/isMounted.html">isMounted</a></span>
+  <span class="name"><a href="../feature_with_api/FeatureWM/isMounted.html">isMounted</a></span>
   <span class="signature">&#8594; bool</span> 
 
 </dt>
 <dd class="inherited">
-  Are this <code>WidgetModel</code> and <code>Elementary</code> currently mounted in a tree.
+  Whether <code>WidgetModel</code> and <code>Elementary</code> are currently mounted in the tree.
   <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
 
 </dd>
 
         <dt id="model" class="property inherited">
-  <span class="name"><a href="../feature_with_api/FeatureWm/model.html">model</a></span>
+  <span class="name"><a href="../feature_with_api/FeatureWM/model.html">model</a></span>
   <span class="signature">&#8594; <a href="../feature_with_api/FeatureModel-class.html">FeatureModel</a></span> 
 
 </dt>
 <dd class="inherited">
-  <code>ElementaryModel</code> for this WidgetModel.
-Only one of business-logic dependencies, that WidgetModel needs.
+  Instance of <code>ElementaryModel</code> for this <code>WidgetModel</code>.
   <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
 
 </dd>
 
         <dt id="runtimeType" class="property inherited">
-  <span class="name"><a href="../feature_with_api/IFeatureWm/runtimeType.html">runtimeType</a></span>
+  <span class="name"><a href="../feature_with_api/IFeatureWM/runtimeType.html">runtimeType</a></span>
   <span class="signature">&#8594; Type</span> 
 
 </dt>
@@ -170,7 +162,7 @@ Only one of business-logic dependencies, that WidgetModel needs.
 </dd>
 
         <dt id="screenTitle" class="property">
-  <span class="name"><a href="../feature_with_api/FeatureWm/screenTitle.html">screenTitle</a></span>
+  <span class="name"><a href="../feature_with_api/FeatureWM/screenTitle.html">screenTitle</a></span>
   <span class="signature">&#8594; String</span> 
 
 </dt>
@@ -181,12 +173,12 @@ Only one of business-logic dependencies, that WidgetModel needs.
 </dd>
 
         <dt id="widget" class="property inherited">
-  <span class="name"><a href="../feature_with_api/FeatureWm/widget.html">widget</a></span>
+  <span class="name"><a href="../feature_with_api/FeatureWM/widget.html">widget</a></span>
   <span class="signature">&#8594; <a href="../feature_with_api/FeatureScreen-class.html">FeatureScreen</a></span> 
 
 </dt>
 <dd class="inherited">
-  Widget that use WidgetModel for build.
+  Widget that uses this <code>WidgetModel</code> for building part of the user interface.
   <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
 
 </dd>
@@ -201,21 +193,21 @@ Only one of business-logic dependencies, that WidgetModel needs.
     <h2>Methods</h2>
     <dl class="callables">
         <dt id="activate" class="callable inherited">
-  <span class="name"><a href="../feature_with_api/FeatureWm/activate.html">activate</a></span><span class="signature">(<wbr>)
+  <span class="name"><a href="../feature_with_api/FeatureWM/activate.html">activate</a></span><span class="signature">(<wbr>)
     <span class="returntype parameter">&#8594; void</span>
   </span>
   
 
 </dt>
 <dd class="inherited">
-  Called when this WidgetModel and Elementary are reinserted into the tree
-after having been removed via <a href="../feature_with_api/FeatureWm/deactivate.html">deactivate</a>.
+  Called when this <code>WidgetModel</code> and <code>Elementary</code> are reinserted into
+the tree after having been removed via <a href="../feature_with_api/FeatureWM/deactivate.html">deactivate</a>.
   <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
 
         <dt id="back" class="callable">
-  <span class="name"><a href="../feature_with_api/FeatureWm/back.html">back</a></span><span class="signature">(<wbr>)
+  <span class="name"><a href="../feature_with_api/FeatureWM/back.html">back</a></span><span class="signature">(<wbr>)
     <span class="returntype parameter">&#8594; void</span>
   </span>
   
@@ -228,20 +220,20 @@ after having been removed via <a href="../feature_with_api/FeatureWm/deactivate.
 </dd>
 
         <dt id="deactivate" class="callable inherited">
-  <span class="name"><a href="../feature_with_api/FeatureWm/deactivate.html">deactivate</a></span><span class="signature">(<wbr>)
+  <span class="name"><a href="../feature_with_api/FeatureWM/deactivate.html">deactivate</a></span><span class="signature">(<wbr>)
     <span class="returntype parameter">&#8594; void</span>
   </span>
   
 
 </dt>
 <dd class="inherited">
-  Called when this WidgetModel and Elementary are removed from the tree.
+  Called when this <code>WidgetModel</code> and <code>Elementary</code> are removed from the tree.
   <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
 
         <dt id="debugFillProperties" class="callable inherited">
-  <span class="name"><a href="../feature_with_api/FeatureWm/debugFillProperties.html">debugFillProperties</a></span><span class="signature">(<wbr><span class="parameter" id="debugFillProperties-param-properties"><span class="type-annotation">DiagnosticPropertiesBuilder</span> <span class="parameter-name">properties</span></span>)
+  <span class="name"><a href="../feature_with_api/FeatureWM/debugFillProperties.html">debugFillProperties</a></span><span class="signature">(<wbr><span class="parameter" id="debugFillProperties-param-properties"><span class="type-annotation">DiagnosticPropertiesBuilder</span> <span class="parameter-name">properties</span></span>)
     <span class="returntype parameter">&#8594; void</span>
   </span>
   
@@ -254,47 +246,48 @@ after having been removed via <a href="../feature_with_api/FeatureWm/deactivate.
 </dd>
 
         <dt id="didChangeDependencies" class="callable inherited">
-  <span class="name"><a href="../feature_with_api/FeatureWm/didChangeDependencies.html">didChangeDependencies</a></span><span class="signature">(<wbr>)
+  <span class="name"><a href="../feature_with_api/FeatureWM/didChangeDependencies.html">didChangeDependencies</a></span><span class="signature">(<wbr>)
     <span class="returntype parameter">&#8594; void</span>
   </span>
   
 
 </dt>
 <dd class="inherited">
-  Called when a dependency of this Widget Model changes.
+  Called when a dependency (by Build Context) of this Widget Model changes.
   <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
 
         <dt id="didUpdateWidget" class="callable inherited">
-  <span class="name"><a href="../feature_with_api/FeatureWm/didUpdateWidget.html">didUpdateWidget</a></span><span class="signature">(<wbr><span class="parameter" id="didUpdateWidget-param-oldWidget"><span class="type-annotation"><a href="../feature_with_api/FeatureScreen-class.html">FeatureScreen</a></span> <span class="parameter-name">oldWidget</span></span>)
+  <span class="name"><a href="../feature_with_api/FeatureWM/didUpdateWidget.html">didUpdateWidget</a></span><span class="signature">(<wbr><span class="parameter" id="didUpdateWidget-param-oldWidget"><span class="type-annotation"><a href="../feature_with_api/FeatureScreen-class.html">FeatureScreen</a></span> <span class="parameter-name">oldWidget</span></span>)
     <span class="returntype parameter">&#8594; void</span>
   </span>
   
 
 </dt>
 <dd class="inherited">
-  Called whenever the widget configuration changes.
+  Called whenever the widget configuration is changed.
   <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
 
         <dt id="dispose" class="callable inherited">
-  <span class="name"><a href="../feature_with_api/FeatureWm/dispose.html">dispose</a></span><span class="signature">(<wbr>)
+  <span class="name"><a href="../feature_with_api/FeatureWM/dispose.html">dispose</a></span><span class="signature">(<wbr>)
     <span class="returntype parameter">&#8594; void</span>
   </span>
   
 
 </dt>
 <dd class="inherited">
-  Called when element with this Widget Model is removed from the tree
+  Called when <code>Elementary</code> with this <code>WidgetModel</code> is removed from the tree
 permanently.
+Should be used for preparation to be garbage collected.
   <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
 
         <dt id="fetch" class="callable">
-  <span class="name"><a href="../feature_with_api/FeatureWm/fetch.html">fetch</a></span><span class="signature">(<wbr>)
+  <span class="name"><a href="../feature_with_api/FeatureWM/fetch.html">fetch</a></span><span class="signature">(<wbr>)
     <span class="returntype parameter">&#8594; Future<span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
@@ -307,46 +300,46 @@ permanently.
 </dd>
 
         <dt id="initWidgetModel" class="callable inherited">
-  <span class="name"><a href="../feature_with_api/FeatureWm/initWidgetModel.html">initWidgetModel</a></span><span class="signature">(<wbr>)
+  <span class="name"><a href="../feature_with_api/FeatureWM/initWidgetModel.html">initWidgetModel</a></span><span class="signature">(<wbr>)
     <span class="returntype parameter">&#8594; void</span>
   </span>
   
 
 </dt>
 <dd class="inherited">
-  Called at first build for initialization of this Widget Model.
+  Called while the first build for initialization of this <code>WidgetModel</code>.
   <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
 
         <dt id="noSuchMethod" class="callable inherited">
-  <span class="name"><a href="../feature_with_api/IFeatureWm/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+  <span class="name"><a href="../feature_with_api/IFeatureWM/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
     <span class="returntype parameter">&#8594; dynamic</span>
   </span>
   
 
 </dt>
 <dd class="inherited">
-  Invoked when a non-existent method or property is accessed.
+  Invoked when a nonexistent method or property is accessed.
   <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
 
         <dt id="onErrorHandle" class="callable inherited">
-  <span class="name"><a href="../feature_with_api/FeatureWm/onErrorHandle.html">onErrorHandle</a></span><span class="signature">(<wbr><span class="parameter" id="onErrorHandle-param-error"><span class="type-annotation">Object</span> <span class="parameter-name">error</span></span>)
+  <span class="name"><a href="../feature_with_api/FeatureWM/onErrorHandle.html">onErrorHandle</a></span><span class="signature">(<wbr><span class="parameter" id="onErrorHandle-param-error"><span class="type-annotation">Object</span> <span class="parameter-name">error</span></span>)
     <span class="returntype parameter">&#8594; void</span>
   </span>
   
 
 </dt>
 <dd class="inherited">
-  Called whenever the Model use method handleError.
+  Called whenever <code>ElementaryModel.handleError</code> is called.
   <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
 
         <dt id="reassemble" class="callable inherited">
-  <span class="name"><a href="../feature_with_api/FeatureWm/reassemble.html">reassemble</a></span><span class="signature">(<wbr>)
+  <span class="name"><a href="../feature_with_api/FeatureWM/reassemble.html">reassemble</a></span><span class="signature">(<wbr>)
     <span class="returntype parameter">&#8594; void</span>
   </span>
   
@@ -355,41 +348,41 @@ permanently.
 <dd class="inherited">
   Called whenever the application is reassembled during debugging, for
 example during hot reload. Most cases therefore do not need to do
-anything in the <a href="../feature_with_api/FeatureWm/reassemble.html">reassemble</a> method.
+anything in the <a href="../feature_with_api/FeatureWM/reassemble.html">reassemble</a> method.
   <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
 
         <dt id="setupTestElement" class="callable inherited">
-  <span class="name"><a href="../feature_with_api/FeatureWm/setupTestElement.html">setupTestElement</a></span><span class="signature">(<wbr><span class="parameter" id="setupTestElement-param-testElement"><span class="type-annotation">Elementary?</span> <span class="parameter-name">testElement</span></span>)
+  <span class="name"><a href="../feature_with_api/FeatureWM/setupTestElement.html">setupTestElement</a></span><span class="signature">(<wbr><span class="parameter" id="setupTestElement-param-testElement"><span class="type-annotation">BuildContext?</span> <span class="parameter-name">testElement</span></span>)
     <span class="returntype parameter">&#8594; void</span>
   </span>
   
 
 </dt>
 <dd class="inherited">
-  Method for setup WidgetModel for testing.
-This method can be used to set element (BuildContext).
+  Method for associate another element to this <code>WidgetModel</code>.
+MUST be used only for testing purposes.
   <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
 
         <dt id="setupTestWidget" class="callable inherited">
-  <span class="name"><a href="../feature_with_api/FeatureWm/setupTestWidget.html">setupTestWidget</a></span><span class="signature">(<wbr><span class="parameter" id="setupTestWidget-param-testWidget"><span class="type-annotation"><a href="../feature_with_api/FeatureScreen-class.html">FeatureScreen</a>?</span> <span class="parameter-name">testWidget</span></span>)
+  <span class="name"><a href="../feature_with_api/FeatureWM/setupTestWidget.html">setupTestWidget</a></span><span class="signature">(<wbr><span class="parameter" id="setupTestWidget-param-testWidget"><span class="type-annotation"><a href="../feature_with_api/FeatureScreen-class.html">FeatureScreen</a>?</span> <span class="parameter-name">testWidget</span></span>)
     <span class="returntype parameter">&#8594; void</span>
   </span>
   
 
 </dt>
 <dd class="inherited">
-  Method for setup WidgetModel for testing.
-This method can be used to set widget.
+  Method for associate another instance of the widget to this <code>WidgetModel</code>.
+MUST be used only for testing purposes.
   <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
 
         <dt id="toDiagnosticsNode" class="callable inherited">
-  <span class="name"><a href="../feature_with_api/FeatureWm/toDiagnosticsNode.html">toDiagnosticsNode</a></span><span class="signature">(<wbr><span class="parameter" id="toDiagnosticsNode-param-name">{<span class="type-annotation">String?</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="toDiagnosticsNode-param-style"><span class="type-annotation">DiagnosticsTreeStyle?</span> <span class="parameter-name">style</span>}</span>)
+  <span class="name"><a href="../feature_with_api/FeatureWM/toDiagnosticsNode.html">toDiagnosticsNode</a></span><span class="signature">(<wbr><span class="parameter" id="toDiagnosticsNode-param-name">{<span class="type-annotation">String?</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="toDiagnosticsNode-param-style"><span class="type-annotation">DiagnosticsTreeStyle?</span> <span class="parameter-name">style</span>}</span>)
     <span class="returntype parameter">&#8594; DiagnosticsNode</span>
   </span>
   
@@ -403,7 +396,7 @@ tools and by <code>DiagnosticsNode.toStringDeep</code>.
 </dd>
 
         <dt id="toString" class="callable inherited">
-  <span class="name"><a href="../feature_with_api/FeatureWm/toString.html">toString</a></span><span class="signature">(<wbr><span class="parameter" id="toString-param-minLevel">{<span class="type-annotation">DiagnosticLevel</span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.info</span>}</span>)
+  <span class="name"><a href="../feature_with_api/FeatureWM/toString.html">toString</a></span><span class="signature">(<wbr><span class="parameter" id="toString-param-minLevel">{<span class="type-annotation">DiagnosticLevel</span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.info</span>}</span>)
     <span class="returntype parameter">&#8594; String</span>
   </span>
   
@@ -416,15 +409,15 @@ tools and by <code>DiagnosticsNode.toStringDeep</code>.
 </dd>
 
         <dt id="toStringShort" class="callable inherited">
-  <span class="name"><a href="../feature_with_api/FeatureWm/toStringShort.html">toStringShort</a></span><span class="signature">(<wbr>)
+  <span class="name"><a href="../feature_with_api/FeatureWM/toStringShort.html">toStringShort</a></span><span class="signature">(<wbr>)
     <span class="returntype parameter">&#8594; String</span>
   </span>
   
 
 </dt>
 <dd class="inherited">
-  A brief description of this object, usually just the <a href="../feature_with_api/IFeatureWm/runtimeType.html">runtimeType</a> and the
-<a href="../feature_with_api/IFeatureWm/hashCode.html">hashCode</a>.
+  A brief description of this object, usually just the <a href="../feature_with_api/IFeatureWM/runtimeType.html">runtimeType</a> and the
+<a href="../feature_with_api/IFeatureWM/hashCode.html">hashCode</a>.
   <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
@@ -438,7 +431,7 @@ tools and by <code>DiagnosticsNode.toStringDeep</code>.
     <h2>Operators</h2>
     <dl class="callables">
         <dt id="operator ==" class="callable inherited">
-  <span class="name"><a href="../feature_with_api/IFeatureWm/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+  <span class="name"><a href="../feature_with_api/IFeatureWM/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
     <span class="returntype parameter">&#8594; bool</span>
   </span>
   
@@ -460,99 +453,25 @@ tools and by <code>DiagnosticsNode.toStringDeep</code>.
   </div> <!-- /.main-content -->
 
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
-    <header id="header-search-sidebar" class="hidden-l">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
   <form class="search-sidebar" role="search">
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
 
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
-  <li><a href="../index.html">dartdoc_example_flutter</a></li>
-  <li><a href="../feature_with_api/feature_with_api-library.html">feature_with_api</a></li>
-  <li class="self-crumb">FeatureWm class</li>
+    <li><a href="../index.html">dartdoc_example_flutter</a></li>
+    <li><a href="../feature_with_api/feature_with_api-library.html">feature_with_api</a></li>
+    <li class="self-crumb">FeatureWM class</li>
 </ol>
 
 
-    <h5>feature_with_api library</h5>
-    <ol>
-      <li class="section-title"><a href="../feature_with_api/feature_with_api-library.html#classes">Classes</a></li>
-        <li><a href="../feature_with_api/DataTypeDto-class.html">DataTypeDto</a></li>
-        <li><a href="../feature_with_api/DataTypeEntityMapper-class.html">DataTypeEntityMapper</a></li>
-        <li><a href="../feature_with_api/FeatureApi-class.html">FeatureApi</a></li>
-        <li><a href="../feature_with_api/FeatureDataDto-class.html">FeatureDataDto</a></li>
-        <li><a href="../feature_with_api/FeatureDataEntity-class.html">FeatureDataEntity</a></li>
-        <li><a href="../feature_with_api/FeatureEntityMapper-class.html">FeatureEntityMapper</a></li>
-        <li><a href="../feature_with_api/FeatureModel-class.html">FeatureModel</a></li>
-        <li><a href="../feature_with_api/FeatureRepository-class.html">FeatureRepository</a></li>
-        <li><a href="../feature_with_api/FeatureRootScreen-class.html">FeatureRootScreen</a></li>
-        <li><a href="../feature_with_api/FeatureScope-class.html">FeatureScope</a></li>
-        <li><a href="../feature_with_api/FeatureScreen-class.html">FeatureScreen</a></li>
-        <li><a href="../feature_with_api/FeatureWm-class.html">FeatureWm</a></li>
-        <li><a href="../feature_with_api/IFeatureModel-class.html">IFeatureModel</a></li>
-        <li><a href="../feature_with_api/IFeatureRepository-class.html">IFeatureRepository</a></li>
-        <li><a href="../feature_with_api/IFeatureScope-class.html">IFeatureScope</a></li>
-        <li><a href="../feature_with_api/IFeatureWm-class.html">IFeatureWm</a></li>
-
-
-
-
-
-
-      <li class="section-title"><a href="../feature_with_api/feature_with_api-library.html#enums">Enums</a></li>
-        <li><a href="../feature_with_api/DataType.html">DataType</a></li>
-        <li><a href="../feature_with_api/DataTypeEntity.html">DataTypeEntity</a></li>
-
-
-</ol>
-
+    <!--<h5>feature_with_api library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
   </div>
 
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
-    <ol>
-
-        <li class="section-title"><a href="../feature_with_api/FeatureWm-class.html#constructors">Constructors</a></li>
-          <li><a href="../feature_with_api/FeatureWm/FeatureWm.create.html">create</a></li>
-
-
-        <li class="section-title">
-          <a href="../feature_with_api/FeatureWm-class.html#instance-properties">Properties</a>
-        </li>
-          <li class="inherited"><a href="../feature_with_api/FeatureWm/context.html">context</a></li>
-          <li><a href="../feature_with_api/FeatureWm/featureDataState.html">featureDataState</a></li>
-          <li class="inherited"><a href="../feature_with_api/IFeatureWm/hashCode.html">hashCode</a></li>
-          <li class="inherited"><a href="../feature_with_api/FeatureWm/isMounted.html">isMounted</a></li>
-          <li class="inherited"><a href="../feature_with_api/FeatureWm/model.html">model</a></li>
-          <li class="inherited"><a href="../feature_with_api/IFeatureWm/runtimeType.html">runtimeType</a></li>
-          <li><a href="../feature_with_api/FeatureWm/screenTitle.html">screenTitle</a></li>
-          <li class="inherited"><a href="../feature_with_api/FeatureWm/widget.html">widget</a></li>
-
-        <li class="section-title"><a href="../feature_with_api/FeatureWm-class.html#instance-methods">Methods</a></li>
-          <li class="inherited"><a href="../feature_with_api/FeatureWm/activate.html">activate</a></li>
-          <li><a href="../feature_with_api/FeatureWm/back.html">back</a></li>
-          <li class="inherited"><a href="../feature_with_api/FeatureWm/deactivate.html">deactivate</a></li>
-          <li class="inherited"><a href="../feature_with_api/FeatureWm/debugFillProperties.html">debugFillProperties</a></li>
-          <li class="inherited"><a href="../feature_with_api/FeatureWm/didChangeDependencies.html">didChangeDependencies</a></li>
-          <li class="inherited"><a href="../feature_with_api/FeatureWm/didUpdateWidget.html">didUpdateWidget</a></li>
-          <li class="inherited"><a href="../feature_with_api/FeatureWm/dispose.html">dispose</a></li>
-          <li><a href="../feature_with_api/FeatureWm/fetch.html">fetch</a></li>
-          <li class="inherited"><a href="../feature_with_api/FeatureWm/initWidgetModel.html">initWidgetModel</a></li>
-          <li class="inherited"><a href="../feature_with_api/IFeatureWm/noSuchMethod.html">noSuchMethod</a></li>
-          <li class="inherited"><a href="../feature_with_api/FeatureWm/onErrorHandle.html">onErrorHandle</a></li>
-          <li class="inherited"><a href="../feature_with_api/FeatureWm/reassemble.html">reassemble</a></li>
-          <li class="inherited"><a href="../feature_with_api/FeatureWm/setupTestElement.html">setupTestElement</a></li>
-          <li class="inherited"><a href="../feature_with_api/FeatureWm/setupTestWidget.html">setupTestWidget</a></li>
-          <li class="inherited"><a href="../feature_with_api/FeatureWm/toDiagnosticsNode.html">toDiagnosticsNode</a></li>
-          <li class="inherited"><a href="../feature_with_api/FeatureWm/toString.html">toString</a></li>
-          <li class="inherited"><a href="../feature_with_api/FeatureWm/toStringShort.html">toStringShort</a></li>
-
-        <li class="section-title inherited"><a href="../feature_with_api/FeatureWm-class.html#operators">Operators</a></li>
-          <li class="inherited"><a href="../feature_with_api/IFeatureWm/operator_equals.html">operator ==</a></li>
-
-
-
-
-</ol>
-
   </div><!--/.sidebar-offcanvas-->
 
 </main>

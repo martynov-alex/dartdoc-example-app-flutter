@@ -38,8 +38,11 @@
   <div class="toggle" id="theme-button">
     <label for="theme">
       <input type="checkbox" id="theme" value="light-theme">
-      <span class="material-symbols-outlined">
+      <span id="dark-theme-button" class="material-symbols-outlined">
         brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
       </span>
     </label>
   </div>
@@ -114,7 +117,7 @@
 
 </dt>
 <dd>
-  Реализация <a href="../feature_with_api/IFeatureModel-class.html">IFeatureModel</a>.
+  Бизнес-логика экрана фичи <a href="../feature_with_api/FeatureScreen-class.html">FeatureScreen</a>.
 </dd>
 
       <dt id="FeatureRepository">
@@ -146,24 +149,14 @@
   Экран фичи.
 </dd>
 
-      <dt id="FeatureWm">
-  <span class="name "><a href="../feature_with_api/FeatureWm-class.html">FeatureWm</a></span> 
+      <dt id="FeatureWM">
+  <span class="name "><a href="../feature_with_api/FeatureWM-class.html">FeatureWM</a></span> 
     <span class="category фича cp-3 linked" title="This is part of the Фича topic."><a href="../topics/Фича-topic.html">Фича</a></span>
     <span class="category elementary cp-4" title="This is part of the Elementary topic.">Elementary</span>
 
 </dt>
 <dd>
-  Реализация <a href="../feature_with_api/IFeatureWm-class.html">IFeatureWm</a>.
-</dd>
-
-      <dt id="IFeatureModel">
-  <span class="name "><a href="../feature_with_api/IFeatureModel-class.html">IFeatureModel</a></span> 
-    <span class="category фича cp-3 linked" title="This is part of the Фича topic."><a href="../topics/Фича-topic.html">Фича</a></span>
-    <span class="category elementary cp-4" title="This is part of the Elementary topic.">Elementary</span>
-
-</dt>
-<dd>
-  Интерфейс <code>ElementaryModel</code> экрана фичи <a href="../feature_with_api/FeatureScreen-class.html">FeatureScreen</a>.
+  Реализация <a href="../feature_with_api/IFeatureWM-class.html">IFeatureWM</a>.
 </dd>
 
       <dt id="IFeatureRepository">
@@ -185,8 +178,8 @@
   DI скоуп фичи.
 </dd>
 
-      <dt id="IFeatureWm">
-  <span class="name "><a href="../feature_with_api/IFeatureWm-class.html">IFeatureWm</a></span> 
+      <dt id="IFeatureWM">
+  <span class="name "><a href="../feature_with_api/IFeatureWM-class.html">IFeatureWM</a></span> 
     <span class="category фича cp-3 linked" title="This is part of the Фича topic."><a href="../topics/Фича-topic.html">Фича</a></span>
     <span class="category elementary cp-4" title="This is part of the Elementary topic.">Elementary</span>
 
@@ -224,15 +217,16 @@
 </div> <!-- /.main-content -->
 
 <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
-  <header id="header-search-sidebar" class="hidden-l">
+  <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
   <form class="search-sidebar" role="search">
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
 
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
-  <li><a href="../index.html">dartdoc_example_flutter</a></li>
-  <li class="self-crumb">Фича topic</li>
+    <li><a href="../index.html">dartdoc_example_flutter</a></li>
+    <li class="self-crumb">Фича topic</li>
 </ol>
 
 
@@ -264,11 +258,10 @@
       <li><a href="../feature_with_api/FeatureRepository-class.html">FeatureRepository</a></li>
       <li><a href="../feature_with_api/FeatureRootScreen-class.html">FeatureRootScreen</a></li>
       <li><a href="../feature_with_api/FeatureScreen-class.html">FeatureScreen</a></li>
-      <li><a href="../feature_with_api/FeatureWm-class.html">FeatureWm</a></li>
-      <li><a href="../feature_with_api/IFeatureModel-class.html">IFeatureModel</a></li>
+      <li><a href="../feature_with_api/FeatureWM-class.html">FeatureWM</a></li>
       <li><a href="../feature_with_api/IFeatureRepository-class.html">IFeatureRepository</a></li>
       <li><a href="../feature_with_api/IFeatureScope-class.html">IFeatureScope</a></li>
-      <li><a href="../feature_with_api/IFeatureWm-class.html">IFeatureWm</a></li>
+      <li><a href="../feature_with_api/IFeatureWM-class.html">IFeatureWM</a></li>
 
 
 
